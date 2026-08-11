@@ -1,0 +1,6 @@
+payer_id,payer_name,plan_type,standard_sla_hours,expedited_sla_hours,active
+PAY001,Summit Health Plan,PPO,72,24,1
+PAY002,HarborCare Insurance,HMO,96,24,1
+PAY003,Evergreen Benefit Partners,EPO,72,12,1
+PAY004,Garden State Community Health,Medicaid,120,24,1
+PAY005,NorthPoint Senior Advantage,Medicare Advantage,96,24,1

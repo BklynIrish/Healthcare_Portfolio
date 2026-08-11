@@ -1,0 +1,6 @@
+denial_reason,denial_count,percentage_of_denials
+"Out-of-network service limitation",10,33.3
+"Required clinical documentation incomplete",6,20.0
+"Alternative treatment required before approval",5,16.7
+"Requested service not covered by plan",5,16.7
+"Medical necessity criteria not met",4,13.3

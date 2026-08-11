@@ -1,0 +1,70 @@
+authorization_id,patient_id,provider_name,payer_name,procedure_description,urgency,current_status,submitted_at,applicable_sla_hours,pending_age_hours
+AUTH0151,PAT035,"Maya Chen, MD","NorthPoint Senior Advantage","MRI brain with and without contrast",expedited,Submitted,"2026-01-27 21:10:55",24,3698
+AUTH0196,PAT014,"Ethan Williams, MD","HarborCare Insurance","CT abdomen and pelvis with contrast",expedited,Submitted,"2026-02-11 16:05:44",24,3343
+AUTH0041,PAT039,"Olivia Murphy, MD","HarborCare Insurance","MRI lumbar spine without contrast",expedited,Submitted,"2026-02-15 14:51:54",24,3249
+AUTH0054,PAT003,"Sophia Patel, DO","NorthPoint Senior Advantage","Upper gastrointestinal endoscopy with biopsy",expedited,"Additional Information Required","2026-03-07 11:12:26",24,2772
+AUTH0057,PAT041,"Olivia Murphy, MD","NorthPoint Senior Advantage","CT chest with contrast",expedited,Submitted,"2026-03-27 12:27:13",24,2291
+AUTH0102,PAT030,"Samuel Nguyen, MD","NorthPoint Senior Advantage","Upper gastrointestinal endoscopy with biopsy",expedited,"In Review","2026-03-29 23:54:39",24,2232
+AUTH0141,PAT011,"Ethan Williams, MD","HarborCare Insurance","CT chest with contrast",expedited,Submitted,"2026-04-12 06:14:20",24,1913
+AUTH0051,PAT001,"Olivia Murphy, MD","Summit Health Plan","CT abdomen and pelvis with contrast",expedited,"Additional Information Required","2026-04-24 15:38:19",24,1616
+AUTH0137,PAT036,"Samuel Nguyen, MD","Garden State Community Health","Complete transthoracic echocardiography",expedited,Submitted,"2026-06-06 15:20:06",24,584
+AUTH0171,PAT030,"Nora Davis, MD","NorthPoint Senior Advantage","Upper gastrointestinal endoscopy with biopsy",expedited,Submitted,"2026-06-23 18:15:06",24,173
+AUTH0024,PAT037,"Samuel Nguyen, MD","NorthPoint Senior Advantage","Lumbar epidural injection",standard,"In Review","2026-01-07 14:45:06",96,4185
+AUTH0037,PAT045,"Samuel Nguyen, MD","NorthPoint Senior Advantage","Total knee arthroplasty",standard,Submitted,"2026-01-08 16:06:45",96,4159
+AUTH0011,PAT022,"Nora Davis, MD","NorthPoint Senior Advantage","Total knee arthroplasty",standard,"In Review","2026-01-14 06:10:45",96,4025
+AUTH0080,PAT006,"Ethan Williams, MD","HarborCare Insurance","Therapeutic exercise treatment",standard,"In Review","2026-01-14 22:06:05",96,4009
+AUTH0059,PAT037,"Sophia Patel, DO","NorthPoint Senior Advantage","MRI lower-extremity joint without contrast",standard,"Additional Information Required","2026-01-17 06:01:09",96,3953
+AUTH0163,PAT023,"Nora Davis, MD","Garden State Community Health","CT abdomen and pelvis with contrast",standard,"Additional Information Required","2026-01-25 18:58:28",120,3749
+AUTH0077,PAT002,"Sophia Patel, DO","Summit Health Plan","CT abdomen and pelvis with contrast",standard,Submitted,"2026-01-26 16:44:15",72,3727
+AUTH0033,PAT032,"Daniel Brooks, MD","Evergreen Benefit Partners","Therapeutic exercise treatment",standard,"Additional Information Required","2026-01-31 15:05:56",72,3608
+AUTH0176,PAT004,"Daniel Brooks, MD","Summit Health Plan","Total knee arthroplasty",standard,"In Review","2026-02-02 08:20:03",72,3567
+AUTH0172,PAT018,"Marcus Rivera, MD","Evergreen Benefit Partners","MRI brain with and without contrast",standard,"Additional Information Required","2026-02-02 19:16:41",72,3556
+AUTH0018,PAT014,"Julian Kim, MD","HarborCare Insurance","CT abdomen and pelvis with contrast",standard,Submitted,"2026-02-03 21:57:14",96,3530
+AUTH0110,PAT039,"Grace Thompson, MD","HarborCare Insurance","MRI lower-extremity joint without contrast",standard,Submitted,"2026-02-06 07:48:11",96,3472
+AUTH0165,PAT023,"Julian Kim, MD","Garden State Community Health","CT abdomen and pelvis with contrast",standard,"In Review","2026-02-12 16:15:02",120,3319
+AUTH0064,PAT023,"Marcus Rivera, MD","Garden State Community Health","CT chest with contrast",standard,"In Review","2026-02-19 23:00:19",120,3144
+AUTH0117,PAT040,"Maya Chen, MD","Summit Health Plan","MRI brain with and without contrast",standard,"Additional Information Required","2026-02-20 06:41:31",72,3137
+AUTH0153,PAT025,"Nora Davis, MD","HarborCare Insurance","Total knee arthroplasty",standard,"In Review","2026-02-25 12:35:34",96,3011
+AUTH0168,PAT042,"Marcus Rivera, MD","Summit Health Plan","CT abdomen and pelvis with contrast",standard,"Additional Information Required","2026-02-25 22:07:54",72,3001
+AUTH0092,PAT020,"Marcus Rivera, MD","Evergreen Benefit Partners","MRI lower-extremity joint without contrast",standard,"In Review","2026-02-27 03:55:17",72,2972
+AUTH0186,PAT047,"Marcus Rivera, MD","HarborCare Insurance","MRI lumbar spine without contrast",standard,"Additional Information Required","2026-03-01 01:28:20",96,2926
+AUTH0192,PAT045,"Grace Thompson, MD","NorthPoint Senior Advantage","Lumbar epidural injection",standard,Submitted,"2026-03-01 08:34:54",96,2919
+AUTH0190,PAT010,"Nora Davis, MD","Garden State Community Health","CT chest with contrast",standard,"In Review","2026-03-01 12:26:09",120,2915
+AUTH0156,PAT033,"Sophia Patel, DO","Summit Health Plan","Complete transthoracic echocardiography",standard,"In Review","2026-03-04 15:27:27",72,2840
+AUTH0087,PAT012,"Olivia Murphy, MD","Garden State Community Health","CT abdomen and pelvis with contrast",standard,"In Review","2026-03-11 07:53:15",120,2680
+AUTH0198,PAT042,"Ethan Williams, MD","Summit Health Plan","CT abdomen and pelvis with contrast",standard,Submitted,"2026-03-12 21:03:55",72,2642
+AUTH0199,PAT007,"Julian Kim, MD","HarborCare Insurance","Complete transthoracic echocardiography",standard,Submitted,"2026-03-14 10:36:36",96,2605
+AUTH0027,PAT026,"Marcus Rivera, MD","Evergreen Benefit Partners","CT abdomen and pelvis with contrast",standard,"In Review","2026-03-14 14:45:35",72,2601
+AUTH0147,PAT036,"Daniel Brooks, MD","Garden State Community Health","Complete transthoracic echocardiography",standard,"Additional Information Required","2026-04-02 13:55:11",120,2146
+AUTH0150,PAT023,"Maya Chen, MD","Garden State Community Health","MRI lumbar spine without contrast",standard,"Additional Information Required","2026-04-08 08:22:26",120,2007
+AUTH0003,PAT031,"Sophia Patel, DO","Summit Health Plan","MRI brain with and without contrast",standard,"In Review","2026-04-11 14:10:49",72,1929
+AUTH0104,PAT003,"Marcus Rivera, MD","NorthPoint Senior Advantage","Total knee arthroplasty",standard,"Additional Information Required","2026-04-13 09:20:11",96,1886
+AUTH0066,PAT013,"Sophia Patel, DO","Summit Health Plan","Upper gastrointestinal endoscopy with biopsy",standard,Submitted,"2026-04-14 19:57:04",72,1852
+AUTH0152,PAT024,"Maya Chen, MD","HarborCare Insurance","Lumbar epidural injection",standard,"Additional Information Required","2026-04-22 14:42:18",96,1665
+AUTH0001,PAT043,"Grace Thompson, MD","HarborCare Insurance","MRI lower-extremity joint without contrast",standard,Submitted,"2026-04-22 15:13:21",96,1664
+AUTH0035,PAT020,"Samuel Nguyen, MD","Evergreen Benefit Partners","Lumbar epidural injection",standard,"Additional Information Required","2026-04-22 15:00:19",72,1664
+AUTH0019,PAT050,"Sophia Patel, DO","NorthPoint Senior Advantage","CT abdomen and pelvis with contrast",standard,Submitted,"2026-04-24 03:51:58",96,1628
+AUTH0085,PAT039,"Olivia Murphy, MD","HarborCare Insurance","Complete transthoracic echocardiography",standard,"In Review","2026-04-24 06:17:43",96,1625
+AUTH0090,PAT018,"Julian Kim, MD","Evergreen Benefit Partners","Lumbar epidural injection",standard,"In Review","2026-04-29 23:10:45",72,1488
+AUTH0009,PAT041,"Olivia Murphy, MD","NorthPoint Senior Advantage","Upper gastrointestinal endoscopy with biopsy",standard,"In Review","2026-05-04 00:51:33",96,1391
+AUTH0100,PAT029,"Daniel Brooks, MD","NorthPoint Senior Advantage","Total knee arthroplasty",standard,Submitted,"2026-05-04 08:28:04",96,1383
+AUTH0191,PAT036,"Julian Kim, MD","Garden State Community Health","MRI lumbar spine without contrast",standard,Submitted,"2026-05-07 00:04:12",120,1319
+AUTH0178,PAT031,"Nora Davis, MD","Summit Health Plan","CT chest with contrast",standard,"Additional Information Required","2026-05-13 14:37:23",72,1161
+AUTH0105,PAT019,"Grace Thompson, MD","Garden State Community Health","Lumbar epidural injection",standard,"In Review","2026-05-14 01:53:33",120,1150
+AUTH0167,PAT027,"Ethan Williams, MD","HarborCare Insurance","Total knee arthroplasty",standard,"In Review","2026-05-14 09:35:05",96,1142
+AUTH0073,PAT029,"Marcus Rivera, MD","NorthPoint Senior Advantage","Complete transthoracic echocardiography",standard,"In Review","2026-05-15 09:30:05",96,1118
+AUTH0022,PAT007,"Grace Thompson, MD","HarborCare Insurance","Complete transthoracic echocardiography",standard,"In Review","2026-05-19 10:17:49",96,1021
+AUTH0155,PAT003,"Maya Chen, MD","NorthPoint Senior Advantage","MRI lumbar spine without contrast",standard,"In Review","2026-05-20 13:34:44",96,994
+AUTH0042,PAT002,"Olivia Murphy, MD","Summit Health Plan","Therapeutic exercise treatment",standard,"In Review","2026-05-30 10:20:44",72,757
+AUTH0136,PAT033,"Marcus Rivera, MD","Summit Health Plan","MRI brain with and without contrast",standard,"Additional Information Required","2026-06-04 20:17:36",72,627
+AUTH0193,PAT016,"Marcus Rivera, MD","Summit Health Plan","CT abdomen and pelvis with contrast",standard,"Additional Information Required","2026-06-06 22:11:20",72,577
+AUTH0044,PAT027,"Julian Kim, MD","HarborCare Insurance","CT abdomen and pelvis with contrast",standard,"In Review","2026-06-08 11:29:33",96,540
+AUTH0123,PAT003,"Ethan Williams, MD","NorthPoint Senior Advantage","Upper gastrointestinal endoscopy with biopsy",standard,"Additional Information Required","2026-06-09 06:13:33",96,521
+AUTH0083,PAT044,"Julian Kim, MD","Summit Health Plan","MRI brain with and without contrast",standard,"In Review","2026-06-12 09:20:16",72,446
+AUTH0095,PAT021,"Sophia Patel, DO","Garden State Community Health","Therapeutic exercise treatment",standard,"In Review","2026-06-12 12:31:18",120,443
+AUTH0135,PAT036,"Nora Davis, MD","Garden State Community Health","CT abdomen and pelvis with contrast",standard,"In Review","2026-06-16 15:38:05",120,344
+AUTH0089,PAT050,"Samuel Nguyen, MD","NorthPoint Senior Advantage","Therapeutic exercise treatment",standard,"Additional Information Required","2026-06-22 03:40:22",96,212
+AUTH0047,PAT036,"Sophia Patel, DO","Garden State Community Health","CT abdomen and pelvis with contrast",standard,"In Review","2026-06-22 07:02:33",120,208
+AUTH0005,PAT040,"Daniel Brooks, MD","Summit Health Plan","Total knee arthroplasty",standard,"In Review","2026-06-23 09:41:50",72,182
+AUTH0144,PAT027,"Samuel Nguyen, MD","HarborCare Insurance","MRI lumbar spine without contrast",standard,Submitted,"2026-06-23 10:01:32",96,181
+AUTH0063,PAT018,"Maya Chen, MD","Evergreen Benefit Partners","Therapeutic exercise treatment",standard,"In Review","2026-06-27 14:46:57",72,81

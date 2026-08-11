@@ -1,0 +1,6 @@
+payer_name,total_requests,finalized_requests,approval_rate_pct,rework_rate_pct,average_turnaround_hours,pending_requests,overdue_requests
+"Evergreen Benefit Partners",18,10,70.0,55.6,60.9,7,7
+"NorthPoint Senior Advantage",45,21,52.4,24.4,50.8,19,18
+"Garden State Community Health",39,19,73.7,15.4,48.5,13,13
+"Summit Health Plan",53,33,84.8,20.8,46.2,15,15
+"HarborCare Insurance",45,27,74.1,31.1,46.0,16,16

@@ -1,0 +1,994 @@
+{
+  "info": {
+    "_postman_id": "841332d6-e976-4d6b-a637-d647cf6e626e",
+    "name": "Project 3 — FHIR Prior Authorization API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "38655154"
+  },
+  "item": [
+    {
+      "name": "Submit Approved Authorization Bundle",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"FHIR server returned a successful response\", function () {",
+              "    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+              "});",
+              "",
+              "const responseBundle = pm.response.json();",
+              "",
+              "pm.test(\"Response is a FHIR Bundle\", function () {",
+              "    pm.expect(responseBundle.resourceType).to.eql(\"Bundle\");",
+              "});",
+              "",
+              "pm.test(\"Response is a transaction-response\", function () {",
+              "    pm.expect(responseBundle.type).to.eql(\"transaction-response\");",
+              "});",
+              "",
+              "pm.test(\"Every transaction entry succeeded\", function () {",
+              "    pm.expect(responseBundle.entry).to.be.an(\"array\");",
+              "",
+              "    responseBundle.entry.forEach(function (entry) {",
+              "        const status = entry.response.status;",
+              "",
+              "        pm.expect(",
+              "            status.startsWith(\"200\") ||",
+              "            status.startsWith(\"201\")",
+              "        ).to.eql(true);",
+              "    });",
+              "});",
+              "",
+              "const requestBundle = JSON.parse(pm.request.body.raw);",
+              "",
+              "function findResource(resourceType) {",
+              "    return requestBundle.entry",
+              "        .map(entry => entry.resource)",
+              "        .find(resource => resource.resourceType === resourceType);",
+              "}",
+              "",
+              "const patient = findResource(\"Patient\");",
+              "const claim = findResource(\"Claim\");",
+              "const claimResponse = findResource(\"ClaimResponse\");",
+              "const task = findResource(\"Task\");",
+              "",
+              "pm.collectionVariables.set(\"patient_id\", patient.id);",
+              "pm.collectionVariables.set(\"authorization_id\", claim.id);",
+              "pm.collectionVariables.set(",
+              "    \"claim_response_id\",",
+              "    claimResponse.id",
+              ");",
+              "pm.collectionVariables.set(\"task_id\", task.id);"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/fhir+json",
+            "type": "text"
+          },
+          {
+            "key": "Accept",
+            "value": "application/fhir+json",
+            "type": "text"
+          },
+          {
+            "key": "Accept",
+            "value": "application/fhir+json",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"resourceType\": \"Bundle\",\n  \"id\": \"BUNDLE-AUTH0008\",\n  \"type\": \"transaction\",\n  \"entry\": [\n    {\n      \"fullUrl\": \"https://northstar.example.org/fhir/Patient/PAT040\",\n      \"resource\": {\n        \"resourceType\": \"Patient\",\n        \"id\": \"PAT040\",\n        \"identifier\": [\n          {\n            \"system\": \"https://northstar.example.org/identifier/medical-record-number\",\n            \"value\": \"MRN100040\"\n          }\n        ],\n        \"name\": [\n          {\n            \"family\": \"Kim\",\n            \"given\": [\n              \"Gabriel\"\n            ]\n          }\n        ],\n        \"gender\": \"male\",\n        \"birthDate\": \"1985-01-13\",\n        \"address\": [\n          {\n            \"postalCode\": \"07054\"\n          }\n        ]\n      },\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Patient/PAT040\"\n      }\n    },\n    {\n      \"fullUrl\": \"https://northstar.example.org/fhir/Practitioner/PRV009\",\n      \"resource\": {\n        \"resourceType\": \"Practitioner\",\n        \"id\": \"PRV009\",\n        \"active\": true,\n        \"identifier\": [\n          {\n            \"system\": \"http://hl7.org/fhir/sid/us-npi\",\n            \"value\": \"1000000009\"\n          }\n        ],\n        \"name\": [\n          {\n            \"text\": \"Nora Davis, MD\"\n          }\n        ],\n        \"qualification\": [\n          {\n            \"code\": {\n              \"text\": \"Pulmonology\"\n            }\n          }\n        ]\n      },\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Practitioner/PRV009\"\n      }\n    },\n    {\n      \"fullUrl\": \"https://northstar.example.org/fhir/Organization/PAY001\",\n      \"resource\": {\n        \"resourceType\": \"Organization\",\n        \"id\": \"PAY001\",\n        \"active\": true,\n        \"type\": [\n          {\n            \"text\": \"PPO\"\n          }\n        ],\n        \"name\": \"Summit Health Plan\"\n      },\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Organization/PAY001\"\n      }\n    },\n    {\n      \"fullUrl\": \"https://northstar.example.org/fhir/Coverage/COV040\",\n      \"resource\": {\n        \"resourceType\": \"Coverage\",\n        \"id\": \"COV040\",\n        \"status\": \"active\",\n        \"identifier\": [\n          {\n            \"system\": \"https://northstar.example.org/identifier/member-id\",\n            \"value\": \"MBR100040\"\n          }\n        ],\n        \"beneficiary\": {\n          \"reference\": \"Patient/PAT040\"\n        },\n        \"payor\": [\n          {\n            \"reference\": \"Organization/PAY001\"\n          }\n        ],\n        \"period\": {\n          \"start\": \"2025-01-01\",\n          \"end\": \"2026-12-31\"\n        },\n        \"class\": [\n          {\n            \"type\": {\n              \"coding\": [\n                {\n                  \"system\": \"http://terminology.hl7.org/CodeSystem/coverage-class\",\n                  \"code\": \"group\",\n                  \"display\": \"Group\"\n                }\n              ]\n            },\n            \"value\": \"GRP2040\"\n          }\n        ]\n      },\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Coverage/COV040\"\n      }\n    },\n    {\n      \"fullUrl\": \"https://northstar.example.org/fhir/ServiceRequest/AUTH0008\",\n      \"resource\": {\n        \"resourceType\": \"ServiceRequest\",\n        \"id\": \"AUTH0008\",\n        \"status\": \"completed\",\n        \"intent\": \"order\",\n        \"priority\": \"urgent\",\n        \"code\": {\n          \"coding\": [\n            {\n              \"system\": \"http://www.ama-assn.org/go/cpt\",\n              \"code\": \"62323\",\n              \"display\": \"Lumbar epidural injection\"\n            }\n          ],\n          \"text\": \"Lumbar epidural injection\"\n        },\n        \"subject\": {\n          \"reference\": \"Patient/PAT040\"\n        },\n        \"requester\": {\n          \"reference\": \"Practitioner/PRV009\"\n        },\n        \"authoredOn\": \"2026-03-28T22:06:28Z\",\n        \"reasonCode\": [\n          {\n            \"coding\": [\n              {\n                \"system\": \"http://hl7.org/fhir/sid/icd-10-cm\",\n                \"code\": \"K21.9\",\n                \"display\": \"Gastro-esophageal reflux disease\"\n              }\n            ]\n          }\n        ],\n        \"insurance\": [\n          {\n            \"reference\": \"Coverage/COV040\"\n          }\n        ]\n      },\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"ServiceRequest/AUTH0008\"\n      }\n    },\n    {\n      \"fullUrl\": \"https://northstar.example.org/fhir/Claim/AUTH0008\",\n      \"resource\": {\n        \"resourceType\": \"Claim\",\n        \"id\": \"AUTH0008\",\n        \"identifier\": [\n          {\n            \"system\": \"https://northstar.example.org/identifier/prior-authorization\",\n            \"value\": \"AUTH0008\"\n          }\n        ],\n        \"status\": \"active\",\n        \"type\": {\n          \"coding\": [\n            {\n              \"system\": \"http://terminology.hl7.org/CodeSystem/claim-type\",\n              \"code\": \"institutional\",\n              \"display\": \"Institutional\"\n            }\n          ]\n        },\n        \"use\": \"preauthorization\",\n        \"patient\": {\n          \"reference\": \"Patient/PAT040\"\n        },\n        \"created\": \"2026-03-29T15:06:28Z\",\n        \"insurer\": {\n          \"reference\": \"Organization/PAY001\"\n        },\n        \"provider\": {\n          \"reference\": \"Practitioner/PRV009\"\n        },\n        \"priority\": {\n          \"coding\": [\n            {\n              \"system\": \"http://terminology.hl7.org/CodeSystem/processpriority\",\n              \"code\": \"stat\"\n            }\n          ]\n        },\n        \"diagnosis\": [\n          {\n            \"sequence\": 1,\n            \"diagnosisCodeableConcept\": {\n              \"coding\": [\n                {\n                  \"system\": \"http://hl7.org/fhir/sid/icd-10-cm\",\n                  \"code\": \"K21.9\",\n                  \"display\": \"Gastro-esophageal reflux disease\"\n                }\n              ]\n            }\n          }\n        ],\n        \"insurance\": [\n          {\n            \"sequence\": 1,\n            \"focal\": true,\n            \"coverage\": {\n              \"reference\": \"Coverage/COV040\"\n            }\n          }\n        ],\n        \"item\": [\n          {\n            \"sequence\": 1,\n            \"diagnosisSequence\": [\n              1\n            ],\n            \"productOrService\": {\n              \"coding\": [\n                {\n                  \"system\": \"http://www.ama-assn.org/go/cpt\",\n                  \"code\": \"62323\",\n                  \"display\": \"Lumbar epidural injection\"\n                }\n              ]\n            }\n          }\n        ]\n      },\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Claim/AUTH0008\"\n      }\n    },\n    {\n      \"fullUrl\": \"https://northstar.example.org/fhir/ClaimResponse/RESP-AUTH0008\",\n      \"resource\": {\n        \"resourceType\": \"ClaimResponse\",\n        \"id\": \"RESP-AUTH0008\",\n        \"status\": \"active\",\n        \"type\": {\n          \"coding\": [\n            {\n              \"system\": \"http://terminology.hl7.org/CodeSystem/claim-type\",\n              \"code\": \"institutional\",\n              \"display\": \"Institutional\"\n            }\n          ]\n        },\n        \"use\": \"preauthorization\",\n        \"patient\": {\n          \"reference\": \"Patient/PAT040\"\n        },\n        \"created\": \"2026-03-31T19:06:28Z\",\n        \"insurer\": {\n          \"reference\": \"Organization/PAY001\"\n        },\n        \"request\": {\n          \"reference\": \"Claim/AUTH0008\"\n        },\n        \"outcome\": \"complete\",\n        \"disposition\": \"Prior authorization approved\",\n        \"item\": [\n          {\n            \"itemSequence\": 1,\n            \"adjudication\": [\n              {\n                \"category\": {\n                  \"coding\": [\n                    {\n                      \"system\": \"https://northstar.example.org/fhir/CodeSystem/prior-auth-adjudication\",\n                      \"code\": \"authorization-outcome\",\n                      \"display\": \"Prior Authorization Outcome\"\n                    }\n                  ]\n                },\n                \"reason\": {\n                  \"text\": \"Approved\"\n                }\n              }\n            ]\n          }\n        ],\n        \"preAuthRef\": \"PA-260008\"\n      },\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"ClaimResponse/RESP-AUTH0008\"\n      }\n    },\n    {\n      \"fullUrl\": \"https://northstar.example.org/fhir/Task/TASK-AUTH0008\",\n      \"resource\": {\n        \"resourceType\": \"Task\",\n        \"id\": \"TASK-AUTH0008\",\n        \"status\": \"completed\",\n        \"businessStatus\": {\n          \"text\": \"Approved\"\n        },\n        \"intent\": \"order\",\n        \"code\": {\n          \"text\": \"Prior authorization management\"\n        },\n        \"description\": \"Manage prior authorization AUTH0008\",\n        \"focus\": {\n          \"reference\": \"Claim/AUTH0008\"\n        },\n        \"for\": {\n          \"reference\": \"Patient/PAT040\"\n        },\n        \"authoredOn\": \"2026-03-28T22:06:28Z\",\n        \"lastModified\": \"2026-03-31T19:06:28Z\",\n        \"requester\": {\n          \"reference\": \"Practitioner/PRV009\"\n        },\n        \"owner\": {\n          \"reference\": \"Organization/PAY001\"\n        },\n        \"note\": [\n          {\n            \"text\": \"Current operational status: Approved\"\n          }\n        ]\n      },\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Task/TASK-AUTH0008\"\n      }\n    }\n  ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}",
+          "host": [
+            "{{base_url}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Retrieve Patient",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Patient retrieval succeeded\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "const resource = pm.response.json();",
+              "",
+              "pm.test(\"Response is a Patient resource\", function () {",
+              "    pm.expect(resource.resourceType).to.eql(\"Patient\");",
+              "});",
+              "",
+              "pm.test(\"Patient ID matches the requested patient\", function () {",
+              "    pm.expect(resource.id).to.eql(",
+              "        pm.collectionVariables.get(\"patient_id\")",
+              "    );",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/fhir+json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/Patient/{{patient_id}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "Patient",
+            "{{patient_id}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Retrieve Claim",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Claim retrieval succeeded\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "const resource = pm.response.json();",
+              "",
+              "pm.test(\"Response is a Claim resource\", function () {",
+              "    pm.expect(resource.resourceType).to.eql(\"Claim\");",
+              "});",
+              "",
+              "pm.test(\"Claim ID matches the authorization ID\", function () {",
+              "    pm.expect(resource.id).to.eql(",
+              "        pm.collectionVariables.get(\"authorization_id\")",
+              "    );",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/fhir+json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/Claim/{{authorization_id}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "Claim",
+            "{{authorization_id}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Retrieve Claim Response",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"ClaimResponse retrieval succeeded\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "const resource = pm.response.json();",
+              "",
+              "pm.test(\"Response is a ClaimResponse resource\", function () {",
+              "    pm.expect(resource.resourceType).to.eql(\"ClaimResponse\");",
+              "});",
+              "",
+              "pm.test(\"ClaimResponse ID matches\", function () {",
+              "    pm.expect(resource.id).to.eql(",
+              "        pm.collectionVariables.get(\"claim_response_id\")",
+              "    );",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/fhir+json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/ClaimResponse/{{claim_response_id}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "ClaimResponse",
+            "{{claim_response_id}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Retrieve Task",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Task retrieval succeeded\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "const resource = pm.response.json();",
+              "",
+              "pm.test(\"Response is a Task resource\", function () {",
+              "    pm.expect(resource.resourceType).to.eql(\"Task\");",
+              "});",
+              "",
+              "pm.test(\"Task ID matches\", function () {",
+              "    pm.expect(resource.id).to.eql(",
+              "        pm.collectionVariables.get(\"task_id\")",
+              "    );",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/fhir+json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/Task/{{task_id}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "Task",
+            "{{task_id}}"
+          ],
+          "query": [
+            {
+              "key": "",
+              "value": null,
+              "type": "text",
+              "disabled": true
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Submit Approved Authorization Bundle",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"FHIR server returned a successful response\", function () {",
+              "    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+              "});",
+              "",
+              "const responseBundle = pm.response.json();",
+              "",
+              "pm.test(\"Response is a FHIR Bundle\", function () {",
+              "    pm.expect(responseBundle.resourceType).to.eql(\"Bundle\");",
+              "});",
+              "",
+              "pm.test(\"Response is a transaction-response\", function () {",
+              "    pm.expect(responseBundle.type).to.eql(\"transaction-response\");",
+              "});",
+              "",
+              "pm.test(\"Every transaction entry succeeded\", function () {",
+              "    pm.expect(responseBundle.entry).to.be.an(\"array\");",
+              "",
+              "    responseBundle.entry.forEach(function (entry) {",
+              "        const status = entry.response.status;",
+              "",
+              "        pm.expect(",
+              "            status.startsWith(\"200\") ||",
+              "            status.startsWith(\"201\")",
+              "        ).to.eql(true);",
+              "    });",
+              "});",
+              "",
+              "const requestBundle = JSON.parse(pm.request.body.raw);",
+              "",
+              "function findResource(resourceType) {",
+              "    return requestBundle.entry",
+              "        .map(entry => entry.resource)",
+              "        .find(resource => resource.resourceType === resourceType);",
+              "}",
+              "",
+              "const patient = findResource(\"Patient\");",
+              "const claim = findResource(\"Claim\");",
+              "const claimResponse = findResource(\"ClaimResponse\");",
+              "const task = findResource(\"Task\");",
+              "",
+              "pm.collectionVariables.set(\"patient_id\", patient.id);",
+              "pm.collectionVariables.set(\"authorization_id\", claim.id);",
+              "pm.collectionVariables.set(",
+              "    \"claim_response_id\",",
+              "    claimResponse.id",
+              ");",
+              "pm.collectionVariables.set(\"task_id\", task.id);"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/fhir+json",
+            "type": "text"
+          },
+          {
+            "key": "Accept",
+            "value": "application/fhir+json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"resourceType\": \"Bundle\",\n  \"id\": \"BUNDLE-AUTH0008\",\n  \"type\": \"transaction\",\n  \"entry\": [\n    {\n      \"fullUrl\": \"https://northstar.example.org/fhir/Patient/PAT040\",\n      \"resource\": {\n        \"resourceType\": \"Patient\",\n        \"id\": \"PAT040\",\n        \"identifier\": [\n          {\n            \"system\": \"https://northstar.example.org/identifier/medical-record-number\",\n            \"value\": \"MRN100040\"\n          }\n        ],\n        \"name\": [\n          {\n            \"family\": \"Kim\",\n            \"given\": [\n              \"Gabriel\"\n            ]\n          }\n        ],\n        \"gender\": \"male\",\n        \"birthDate\": \"1985-01-13\",\n        \"address\": [\n          {\n            \"postalCode\": \"07054\"\n          }\n        ]\n      },\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Patient/PAT040\"\n      }\n    },\n    {\n      \"fullUrl\": \"https://northstar.example.org/fhir/Practitioner/PRV009\",\n      \"resource\": {\n        \"resourceType\": \"Practitioner\",\n        \"id\": \"PRV009\",\n        \"active\": true,\n        \"identifier\": [\n          {\n            \"system\": \"http://hl7.org/fhir/sid/us-npi\",\n            \"value\": \"1000000009\"\n          }\n        ],\n        \"name\": [\n          {\n            \"text\": \"Nora Davis, MD\"\n          }\n        ],\n        \"qualification\": [\n          {\n            \"code\": {\n              \"text\": \"Pulmonology\"\n            }\n          }\n        ]\n      },\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Practitioner/PRV009\"\n      }\n    },\n    {\n      \"fullUrl\": \"https://northstar.example.org/fhir/Organization/PAY001\",\n      \"resource\": {\n        \"resourceType\": \"Organization\",\n        \"id\": \"PAY001\",\n        \"active\": true,\n        \"type\": [\n          {\n            \"text\": \"PPO\"\n          }\n        ],\n        \"name\": \"Summit Health Plan\"\n      },\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Organization/PAY001\"\n      }\n    },\n    {\n      \"fullUrl\": \"https://northstar.example.org/fhir/Coverage/COV040\",\n      \"resource\": {\n        \"resourceType\": \"Coverage\",\n        \"id\": \"COV040\",\n        \"status\": \"active\",\n        \"identifier\": [\n          {\n            \"system\": \"https://northstar.example.org/identifier/member-id\",\n            \"value\": \"MBR100040\"\n          }\n        ],\n        \"beneficiary\": {\n          \"reference\": \"Patient/PAT040\"\n        },\n        \"payor\": [\n          {\n            \"reference\": \"Organization/PAY001\"\n          }\n        ],\n        \"period\": {\n          \"start\": \"2025-01-01\",\n          \"end\": \"2026-12-31\"\n        },\n        \"class\": [\n          {\n            \"type\": {\n              \"coding\": [\n                {\n                  \"system\": \"http://terminology.hl7.org/CodeSystem/coverage-class\",\n                  \"code\": \"group\",\n                  \"display\": \"Group\"\n                }\n              ]\n            },\n            \"value\": \"GRP2040\"\n          }\n        ]\n      },\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Coverage/COV040\"\n      }\n    },\n    {\n      \"fullUrl\": \"https://northstar.example.org/fhir/ServiceRequest/AUTH0008\",\n      \"resource\": {\n        \"resourceType\": \"ServiceRequest\",\n        \"id\": \"AUTH0008\",\n        \"status\": \"completed\",\n        \"intent\": \"order\",\n        \"priority\": \"urgent\",\n        \"code\": {\n          \"coding\": [\n            {\n              \"system\": \"http://www.ama-assn.org/go/cpt\",\n              \"code\": \"62323\",\n              \"display\": \"Lumbar epidural injection\"\n            }\n          ],\n          \"text\": \"Lumbar epidural injection\"\n        },\n        \"subject\": {\n          \"reference\": \"Patient/PAT040\"\n        },\n        \"requester\": {\n          \"reference\": \"Practitioner/PRV009\"\n        },\n        \"authoredOn\": \"2026-03-28T22:06:28Z\",\n        \"reasonCode\": [\n          {\n            \"coding\": [\n              {\n                \"system\": \"http://hl7.org/fhir/sid/icd-10-cm\",\n                \"code\": \"K21.9\",\n                \"display\": \"Gastro-esophageal reflux disease\"\n              }\n            ]\n          }\n        ],\n        \"insurance\": [\n          {\n            \"reference\": \"Coverage/COV040\"\n          }\n        ]\n      },\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"ServiceRequest/AUTH0008\"\n      }\n    },\n    {\n      \"fullUrl\": \"https://northstar.example.org/fhir/Claim/AUTH0008\",\n      \"resource\": {\n        \"resourceType\": \"Claim\",\n        \"id\": \"AUTH0008\",\n        \"identifier\": [\n          {\n            \"system\": \"https://northstar.example.org/identifier/prior-authorization\",\n            \"value\": \"AUTH0008\"\n          }\n        ],\n        \"status\": \"active\",\n        \"type\": {\n          \"coding\": [\n            {\n              \"system\": \"http://terminology.hl7.org/CodeSystem/claim-type\",\n              \"code\": \"institutional\",\n              \"display\": \"Institutional\"\n            }\n          ]\n        },\n        \"use\": \"preauthorization\",\n        \"patient\": {\n          \"reference\": \"Patient/PAT040\"\n        },\n        \"created\": \"2026-03-29T15:06:28Z\",\n        \"insurer\": {\n          \"reference\": \"Organization/PAY001\"\n        },\n        \"provider\": {\n          \"reference\": \"Practitioner/PRV009\"\n        },\n        \"priority\": {\n          \"coding\": [\n            {\n              \"system\": \"http://terminology.hl7.org/CodeSystem/processpriority\",\n              \"code\": \"stat\"\n            }\n          ]\n        },\n        \"diagnosis\": [\n          {\n            \"sequence\": 1,\n            \"diagnosisCodeableConcept\": {\n              \"coding\": [\n                {\n                  \"system\": \"http://hl7.org/fhir/sid/icd-10-cm\",\n                  \"code\": \"K21.9\",\n                  \"display\": \"Gastro-esophageal reflux disease\"\n                }\n              ]\n            }\n          }\n        ],\n        \"insurance\": [\n          {\n            \"sequence\": 1,\n            \"focal\": true,\n            \"coverage\": {\n              \"reference\": \"Coverage/COV040\"\n            }\n          }\n        ],\n        \"item\": [\n          {\n            \"sequence\": 1,\n            \"diagnosisSequence\": [\n              1\n            ],\n            \"productOrService\": {\n              \"coding\": [\n                {\n                  \"system\": \"http://www.ama-assn.org/go/cpt\",\n                  \"code\": \"62323\",\n                  \"display\": \"Lumbar epidural injection\"\n                }\n              ]\n            }\n          }\n        ]\n      },\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Claim/AUTH0008\"\n      }\n    },\n    {\n      \"fullUrl\": \"https://northstar.example.org/fhir/ClaimResponse/RESP-AUTH0008\",\n      \"resource\": {\n        \"resourceType\": \"ClaimResponse\",\n        \"id\": \"RESP-AUTH0008\",\n        \"status\": \"active\",\n        \"type\": {\n          \"coding\": [\n            {\n              \"system\": \"http://terminology.hl7.org/CodeSystem/claim-type\",\n              \"code\": \"institutional\",\n              \"display\": \"Institutional\"\n            }\n          ]\n        },\n        \"use\": \"preauthorization\",\n        \"patient\": {\n          \"reference\": \"Patient/PAT040\"\n        },\n        \"created\": \"2026-03-31T19:06:28Z\",\n        \"insurer\": {\n          \"reference\": \"Organization/PAY001\"\n        },\n        \"request\": {\n          \"reference\": \"Claim/AUTH0008\"\n        },\n        \"outcome\": \"complete\",\n        \"disposition\": \"Prior authorization approved\",\n        \"item\": [\n          {\n            \"itemSequence\": 1,\n            \"adjudication\": [\n              {\n                \"category\": {\n                  \"coding\": [\n                    {\n                      \"system\": \"https://northstar.example.org/fhir/CodeSystem/prior-auth-adjudication\",\n                      \"code\": \"authorization-outcome\",\n                      \"display\": \"Prior Authorization Outcome\"\n                    }\n                  ]\n                },\n                \"reason\": {\n                  \"text\": \"Approved\"\n                }\n              }\n            ]\n          }\n        ],\n        \"preAuthRef\": \"PA-260008\"\n      },\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"ClaimResponse/RESP-AUTH0008\"\n      }\n    },\n    {\n      \"fullUrl\": \"https://northstar.example.org/fhir/Task/TASK-AUTH0008\",\n      \"resource\": {\n        \"resourceType\": \"Task\",\n        \"id\": \"TASK-AUTH0008\",\n        \"status\": \"completed\",\n        \"businessStatus\": {\n          \"text\": \"Approved\"\n        },\n        \"intent\": \"order\",\n        \"code\": {\n          \"text\": \"Prior authorization management\"\n        },\n        \"description\": \"Manage prior authorization AUTH0008\",\n        \"focus\": {\n          \"reference\": \"Claim/AUTH0008\"\n        },\n        \"for\": {\n          \"reference\": \"Patient/PAT040\"\n        },\n        \"authoredOn\": \"2026-03-28T22:06:28Z\",\n        \"lastModified\": \"2026-03-31T19:06:28Z\",\n        \"requester\": {\n          \"reference\": \"Practitioner/PRV009\"\n        },\n        \"owner\": {\n          \"reference\": \"Organization/PAY001\"\n        },\n        \"note\": [\n          {\n            \"text\": \"Current operational status: Approved\"\n          }\n        ]\n      },\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Task/TASK-AUTH0008\"\n      }\n    }\n  ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}",
+          "host": [
+            "{{base_url}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Submit Denied Authorization Bundle",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"FHIR server returned a successful response\", function () {",
+              "    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+              "});",
+              "",
+              "const responseBundle = pm.response.json();",
+              "",
+              "pm.test(\"Response is a FHIR Bundle\", function () {",
+              "    pm.expect(responseBundle.resourceType).to.eql(\"Bundle\");",
+              "});",
+              "",
+              "pm.test(\"Response is a transaction-response\", function () {",
+              "    pm.expect(responseBundle.type).to.eql(\"transaction-response\");",
+              "});",
+              "",
+              "pm.test(\"Every transaction entry succeeded\", function () {",
+              "    pm.expect(responseBundle.entry).to.be.an(\"array\");",
+              "",
+              "    responseBundle.entry.forEach(function (entry) {",
+              "        const status = entry.response.status;",
+              "",
+              "        pm.expect(",
+              "            status.startsWith(\"200\") ||",
+              "            status.startsWith(\"201\")",
+              "        ).to.eql(true);",
+              "    });",
+              "});",
+              "",
+              "const requestBundle = JSON.parse(pm.request.body.raw);",
+              "",
+              "function findResource(resourceType) {",
+              "    return requestBundle.entry",
+              "        .map(entry => entry.resource)",
+              "        .find(resource => resource.resourceType === resourceType);",
+              "}",
+              "",
+              "const patient = findResource(\"Patient\");",
+              "const claim = findResource(\"Claim\");",
+              "const claimResponse = findResource(\"ClaimResponse\");",
+              "const task = findResource(\"Task\");",
+              "",
+              "pm.collectionVariables.set(\"patient_id\", patient.id);",
+              "pm.collectionVariables.set(\"authorization_id\", claim.id);",
+              "pm.collectionVariables.set(",
+              "    \"claim_response_id\",",
+              "    claimResponse.id",
+              ");",
+              "pm.collectionVariables.set(\"task_id\", task.id);",
+              "",
+              "const deniedClaimResponse = requestBundle.entry",
+              "    .map(entry => entry.resource)",
+              "    .find(resource => resource.resourceType === \"ClaimResponse\");",
+              "",
+              "pm.test(\"ClaimResponse represents a denied authorization\", function () {",
+              "    pm.expect(",
+              "        deniedClaimResponse.disposition.toLowerCase()",
+              "    ).to.include(\"denied\");",
+              "});",
+              "",
+              "pm.test(\"Denied response has no authorization number\", function () {",
+              "    pm.expect(deniedClaimResponse.preAuthRef).to.be.undefined;",
+              "});",
+              "",
+              "pm.test(\"Denied response contains an adjudication reason\", function () {",
+              "    const reason =",
+              "        deniedClaimResponse.item[0]",
+              "            .adjudication[0]",
+              "            .reason.text;",
+              "",
+              "    pm.expect(reason).to.be.a(\"string\").and.not.empty;",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/fhir+json",
+            "type": "text"
+          },
+          {
+            "key": "Accept",
+            "value": "application/fhir+json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"resourceType\": \"Bundle\",\n  \"id\": \"BUNDLE-AUTH0002\",\n  \"type\": \"transaction\",\n  \"entry\": [\n    {\n      \"fullUrl\": \"https://northstar.example.org/fhir/Patient/PAT020\",\n      \"resource\": {\n        \"resourceType\": \"Patient\",\n        \"id\": \"PAT020\",\n        \"identifier\": [\n          {\n            \"system\": \"https://northstar.example.org/identifier/medical-record-number\",\n            \"value\": \"MRN100020\"\n          }\n        ],\n        \"name\": [\n          {\n            \"family\": \"Murphy\",\n            \"given\": [\n              \"Chloe\"\n            ]\n          }\n        ],\n        \"gender\": \"female\",\n        \"birthDate\": \"1971-12-04\",\n        \"address\": [\n          {\n            \"postalCode\": \"07046\"\n          }\n        ]\n      },\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Patient/PAT020\"\n      }\n    },\n    {\n      \"fullUrl\": \"https://northstar.example.org/fhir/Practitioner/PRV005\",\n      \"resource\": {\n        \"resourceType\": \"Practitioner\",\n        \"id\": \"PRV005\",\n        \"active\": true,\n        \"identifier\": [\n          {\n            \"system\": \"http://hl7.org/fhir/sid/us-npi\",\n            \"value\": \"1000000005\"\n          }\n        ],\n        \"name\": [\n          {\n            \"text\": \"Olivia Murphy, MD\"\n          }\n        ],\n        \"qualification\": [\n          {\n            \"code\": {\n              \"text\": \"Rheumatology\"\n            }\n          }\n        ]\n      },\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Practitioner/PRV005\"\n      }\n    },\n    {\n      \"fullUrl\": \"https://northstar.example.org/fhir/Organization/PAY003\",\n      \"resource\": {\n        \"resourceType\": \"Organization\",\n        \"id\": \"PAY003\",\n        \"active\": true,\n        \"type\": [\n          {\n            \"text\": \"EPO\"\n          }\n        ],\n        \"name\": \"Evergreen Benefit Partners\"\n      },\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Organization/PAY003\"\n      }\n    },\n    {\n      \"fullUrl\": \"https://northstar.example.org/fhir/Coverage/COV020\",\n      \"resource\": {\n        \"resourceType\": \"Coverage\",\n        \"id\": \"COV020\",\n        \"status\": \"active\",\n        \"identifier\": [\n          {\n            \"system\": \"https://northstar.example.org/identifier/member-id\",\n            \"value\": \"MBR100020\"\n          }\n        ],\n        \"beneficiary\": {\n          \"reference\": \"Patient/PAT020\"\n        },\n        \"payor\": [\n          {\n            \"reference\": \"Organization/PAY003\"\n          }\n        ],\n        \"period\": {\n          \"start\": \"2025-01-01\",\n          \"end\": \"2026-12-31\"\n        },\n        \"class\": [\n          {\n            \"type\": {\n              \"coding\": [\n                {\n                  \"system\": \"http://terminology.hl7.org/CodeSystem/coverage-class\",\n                  \"code\": \"group\",\n                  \"display\": \"Group\"\n                }\n              ]\n            },\n            \"value\": \"GRP2020\"\n          }\n        ]\n      },\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Coverage/COV020\"\n      }\n    },\n    {\n      \"fullUrl\": \"https://northstar.example.org/fhir/ServiceRequest/AUTH0002\",\n      \"resource\": {\n        \"resourceType\": \"ServiceRequest\",\n        \"id\": \"AUTH0002\",\n        \"status\": \"completed\",\n        \"intent\": \"order\",\n        \"priority\": \"routine\",\n        \"code\": {\n          \"coding\": [\n            {\n              \"system\": \"http://www.ama-assn.org/go/cpt\",\n              \"code\": \"71260\",\n              \"display\": \"CT chest with contrast\"\n            }\n          ],\n          \"text\": \"CT chest with contrast\"\n        },\n        \"subject\": {\n          \"reference\": \"Patient/PAT020\"\n        },\n        \"requester\": {\n          \"reference\": \"Practitioner/PRV005\"\n        },\n        \"authoredOn\": \"2026-06-02T21:54:05Z\",\n        \"reasonCode\": [\n          {\n            \"coding\": [\n              {\n                \"system\": \"http://hl7.org/fhir/sid/icd-10-cm\",\n                \"code\": \"M54.16\",\n                \"display\": \"Lumbar radiculopathy\"\n              }\n            ]\n          }\n        ],\n        \"insurance\": [\n          {\n            \"reference\": \"Coverage/COV020\"\n          }\n        ]\n      },\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"ServiceRequest/AUTH0002\"\n      }\n    },\n    {\n      \"fullUrl\": \"https://northstar.example.org/fhir/Claim/AUTH0002\",\n      \"resource\": {\n        \"resourceType\": \"Claim\",\n        \"id\": \"AUTH0002\",\n        \"identifier\": [\n          {\n            \"system\": \"https://northstar.example.org/identifier/prior-authorization\",\n            \"value\": \"AUTH0002\"\n          }\n        ],\n        \"status\": \"active\",\n        \"type\": {\n          \"coding\": [\n            {\n              \"system\": \"http://terminology.hl7.org/CodeSystem/claim-type\",\n              \"code\": \"institutional\",\n              \"display\": \"Institutional\"\n            }\n          ]\n        },\n        \"use\": \"preauthorization\",\n        \"patient\": {\n          \"reference\": \"Patient/PAT020\"\n        },\n        \"created\": \"2026-06-03T13:54:05Z\",\n        \"insurer\": {\n          \"reference\": \"Organization/PAY003\"\n        },\n        \"provider\": {\n          \"reference\": \"Practitioner/PRV005\"\n        },\n        \"priority\": {\n          \"coding\": [\n            {\n              \"system\": \"http://terminology.hl7.org/CodeSystem/processpriority\",\n              \"code\": \"normal\"\n            }\n          ]\n        },\n        \"diagnosis\": [\n          {\n            \"sequence\": 1,\n            \"diagnosisCodeableConcept\": {\n              \"coding\": [\n                {\n                  \"system\": \"http://hl7.org/fhir/sid/icd-10-cm\",\n                  \"code\": \"M54.16\",\n                  \"display\": \"Lumbar radiculopathy\"\n                }\n              ]\n            }\n          }\n        ],\n        \"insurance\": [\n          {\n            \"sequence\": 1,\n            \"focal\": true,\n            \"coverage\": {\n              \"reference\": \"Coverage/COV020\"\n            }\n          }\n        ],\n        \"item\": [\n          {\n            \"sequence\": 1,\n            \"diagnosisSequence\": [\n              1\n            ],\n            \"productOrService\": {\n              \"coding\": [\n                {\n                  \"system\": \"http://www.ama-assn.org/go/cpt\",\n                  \"code\": \"71260\",\n                  \"display\": \"CT chest with contrast\"\n                }\n              ]\n            }\n          }\n        ]\n      },\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Claim/AUTH0002\"\n      }\n    },\n    {\n      \"fullUrl\": \"https://northstar.example.org/fhir/ClaimResponse/RESP-AUTH0002\",\n      \"resource\": {\n        \"resourceType\": \"ClaimResponse\",\n        \"id\": \"RESP-AUTH0002\",\n        \"status\": \"active\",\n        \"type\": {\n          \"coding\": [\n            {\n              \"system\": \"http://terminology.hl7.org/CodeSystem/claim-type\",\n              \"code\": \"institutional\",\n              \"display\": \"Institutional\"\n            }\n          ]\n        },\n        \"use\": \"preauthorization\",\n        \"patient\": {\n          \"reference\": \"Patient/PAT020\"\n        },\n        \"created\": \"2026-06-06T05:54:05Z\",\n        \"insurer\": {\n          \"reference\": \"Organization/PAY003\"\n        },\n        \"request\": {\n          \"reference\": \"Claim/AUTH0002\"\n        },\n        \"outcome\": \"complete\",\n        \"disposition\": \"Prior authorization denied: Required clinical documentation incomplete\",\n        \"item\": [\n          {\n            \"itemSequence\": 1,\n            \"adjudication\": [\n              {\n                \"category\": {\n                  \"coding\": [\n                    {\n                      \"system\": \"https://northstar.example.org/fhir/CodeSystem/prior-auth-adjudication\",\n                      \"code\": \"authorization-outcome\",\n                      \"display\": \"Prior Authorization Outcome\"\n                    }\n                  ]\n                },\n                \"reason\": {\n                  \"text\": \"Required clinical documentation incomplete\"\n                }\n              }\n            ]\n          }\n        ]\n      },\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"ClaimResponse/RESP-AUTH0002\"\n      }\n    },\n    {\n      \"fullUrl\": \"https://northstar.example.org/fhir/Task/TASK-AUTH0002\",\n      \"resource\": {\n        \"resourceType\": \"Task\",\n        \"id\": \"TASK-AUTH0002\",\n        \"status\": \"completed\",\n        \"businessStatus\": {\n          \"text\": \"Denied\"\n        },\n        \"intent\": \"order\",\n        \"code\": {\n          \"text\": \"Prior authorization management\"\n        },\n        \"description\": \"Manage prior authorization AUTH0002\",\n        \"focus\": {\n          \"reference\": \"Claim/AUTH0002\"\n        },\n        \"for\": {\n          \"reference\": \"Patient/PAT020\"\n        },\n        \"authoredOn\": \"2026-06-02T21:54:05Z\",\n        \"lastModified\": \"2026-06-06T05:54:05Z\",\n        \"requester\": {\n          \"reference\": \"Practitioner/PRV005\"\n        },\n        \"owner\": {\n          \"reference\": \"Organization/PAY003\"\n        },\n        \"note\": [\n          {\n            \"text\": \"Current operational status: Denied\"\n          }\n        ]\n      },\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Task/TASK-AUTH0002\"\n      }\n    }\n  ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}",
+          "host": [
+            "{{base_url}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Retrieve Patient",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Patient retrieval succeeded\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "const resource = pm.response.json();",
+              "",
+              "pm.test(\"Response is a Patient resource\", function () {",
+              "    pm.expect(resource.resourceType).to.eql(\"Patient\");",
+              "});",
+              "",
+              "pm.test(\"Patient ID matches the requested patient\", function () {",
+              "    pm.expect(resource.id).to.eql(",
+              "        pm.collectionVariables.get(\"patient_id\")",
+              "    );",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/fhir+json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/Patient/{{patient_id}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "Patient",
+            "{{patient_id}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Retrieve Patient Copy",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Patient retrieval succeeded\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "const resource = pm.response.json();",
+              "",
+              "pm.test(\"Response is a Patient resource\", function () {",
+              "    pm.expect(resource.resourceType).to.eql(\"Patient\");",
+              "});",
+              "",
+              "pm.test(\"Patient ID matches the requested patient\", function () {",
+              "    pm.expect(resource.id).to.eql(",
+              "        pm.collectionVariables.get(\"patient_id\")",
+              "    );",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/fhir+json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/Patient/{{patient_id}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "Patient",
+            "{{patient_id}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Retrieve Claim",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Claim retrieval succeeded\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "const resource = pm.response.json();",
+              "",
+              "pm.test(\"Response is a Claim resource\", function () {",
+              "    pm.expect(resource.resourceType).to.eql(\"Claim\");",
+              "});",
+              "",
+              "pm.test(\"Claim ID matches the authorization ID\", function () {",
+              "    pm.expect(resource.id).to.eql(",
+              "        pm.collectionVariables.get(\"authorization_id\")",
+              "    );",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/fhir+json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/Patient/{{patient_id}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "Patient",
+            "{{patient_id}}"
+          ],
+          "query": [
+            {
+              "key": "",
+              "value": null,
+              "type": "text",
+              "disabled": true
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Retrieve Claim",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Claim retrieval succeeded\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "const resource = pm.response.json();",
+              "",
+              "pm.test(\"Response is a Claim resource\", function () {",
+              "    pm.expect(resource.resourceType).to.eql(\"Claim\");",
+              "});",
+              "",
+              "pm.test(\"Claim ID matches the authorization ID\", function () {",
+              "    pm.expect(resource.id).to.eql(",
+              "        pm.collectionVariables.get(\"authorization_id\")",
+              "    );",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/Claim/{{authorization_id}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "Claim",
+            "{{authorization_id}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Retrieve Claim Response",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"ClaimResponse retrieval succeeded\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "const resource = pm.response.json();",
+              "",
+              "pm.test(\"Response is a ClaimResponse resource\", function () {",
+              "    pm.expect(resource.resourceType).to.eql(\"ClaimResponse\");",
+              "});",
+              "",
+              "pm.test(\"ClaimResponse ID matches\", function () {",
+              "    pm.expect(resource.id).to.eql(",
+              "        pm.collectionVariables.get(\"claim_response_id\")",
+              "    );",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/fhir+json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/ClaimResponse/{{claim_response_id}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "ClaimResponse",
+            "{{claim_response_id}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Retrieve Task",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Task retrieval succeeded\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "const resource = pm.response.json();",
+              "",
+              "pm.test(\"Response is a Task resource\", function () {",
+              "    pm.expect(resource.resourceType).to.eql(\"Task\");",
+              "});",
+              "",
+              "pm.test(\"Task ID matches\", function () {",
+              "    pm.expect(resource.id).to.eql(",
+              "        pm.collectionVariables.get(\"task_id\")",
+              "    );",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/Task/{{task_id}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "Task",
+            "{{task_id}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Submit Denied Authorization Bundle",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"FHIR server returned a successful response\", function () {",
+              "    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+              "});",
+              "",
+              "const responseBundle = pm.response.json();",
+              "",
+              "pm.test(\"Response is a FHIR Bundle\", function () {",
+              "    pm.expect(responseBundle.resourceType).to.eql(\"Bundle\");",
+              "});",
+              "",
+              "pm.test(\"Response is a transaction-response\", function () {",
+              "    pm.expect(responseBundle.type).to.eql(\"transaction-response\");",
+              "});",
+              "",
+              "pm.test(\"Every transaction entry succeeded\", function () {",
+              "    pm.expect(responseBundle.entry).to.be.an(\"array\");",
+              "",
+              "    responseBundle.entry.forEach(function (entry) {",
+              "        const status = entry.response.status;",
+              "",
+              "        pm.expect(",
+              "            status.startsWith(\"200\") ||",
+              "            status.startsWith(\"201\")",
+              "        ).to.eql(true);",
+              "    });",
+              "});",
+              "",
+              "const requestBundle = JSON.parse(pm.request.body.raw);",
+              "",
+              "function findResource(resourceType) {",
+              "    return requestBundle.entry",
+              "        .map(entry => entry.resource)",
+              "        .find(resource => resource.resourceType === resourceType);",
+              "}",
+              "",
+              "const patient = findResource(\"Patient\");",
+              "const claim = findResource(\"Claim\");",
+              "const claimResponse = findResource(\"ClaimResponse\");",
+              "const task = findResource(\"Task\");",
+              "",
+              "pm.collectionVariables.set(\"patient_id\", patient.id);",
+              "pm.collectionVariables.set(\"authorization_id\", claim.id);",
+              "pm.collectionVariables.set(",
+              "    \"claim_response_id\",",
+              "    claimResponse.id",
+              ");",
+              "pm.collectionVariables.set(\"task_id\", task.id);",
+              "",
+              "const deniedClaimResponse = requestBundle.entry",
+              "    .map(entry => entry.resource)",
+              "    .find(resource => resource.resourceType === \"ClaimResponse\");",
+              "",
+              "pm.test(\"ClaimResponse represents a denied authorization\", function () {",
+              "    pm.expect(",
+              "        deniedClaimResponse.disposition.toLowerCase()",
+              "    ).to.include(\"denied\");",
+              "});",
+              "",
+              "pm.test(\"Denied response has no authorization number\", function () {",
+              "    pm.expect(deniedClaimResponse.preAuthRef).to.be.undefined;",
+              "});",
+              "",
+              "pm.test(\"Denied response contains an adjudication reason\", function () {",
+              "    const reason =",
+              "        deniedClaimResponse.item[0]",
+              "            .adjudication[0]",
+              "            .reason.text;",
+              "",
+              "    pm.expect(reason).to.be.a(\"string\").and.not.empty;",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/fhir+json",
+            "type": "text"
+          },
+          {
+            "key": "Accept",
+            "value": "application/fhir+json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"resourceType\": \"Bundle\",\n  \"id\": \"BUNDLE-AUTH0002\",\n  \"type\": \"transaction\",\n  \"entry\": [\n    {\n      \"fullUrl\": \"https://northstar.example.org/fhir/Patient/PAT020\",\n      \"resource\": {\n        \"resourceType\": \"Patient\",\n        \"id\": \"PAT020\",\n        \"identifier\": [\n          {\n            \"system\": \"https://northstar.example.org/identifier/medical-record-number\",\n            \"value\": \"MRN100020\"\n          }\n        ],\n        \"name\": [\n          {\n            \"family\": \"Murphy\",\n            \"given\": [\n              \"Chloe\"\n            ]\n          }\n        ],\n        \"gender\": \"female\",\n        \"birthDate\": \"1971-12-04\",\n        \"address\": [\n          {\n            \"postalCode\": \"07046\"\n          }\n        ]\n      },\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Patient/PAT020\"\n      }\n    },\n    {\n      \"fullUrl\": \"https://northstar.example.org/fhir/Practitioner/PRV005\",\n      \"resource\": {\n        \"resourceType\": \"Practitioner\",\n        \"id\": \"PRV005\",\n        \"active\": true,\n        \"identifier\": [\n          {\n            \"system\": \"http://hl7.org/fhir/sid/us-npi\",\n            \"value\": \"1000000005\"\n          }\n        ],\n        \"name\": [\n          {\n            \"text\": \"Olivia Murphy, MD\"\n          }\n        ],\n        \"qualification\": [\n          {\n            \"code\": {\n              \"text\": \"Rheumatology\"\n            }\n          }\n        ]\n      },\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Practitioner/PRV005\"\n      }\n    },\n    {\n      \"fullUrl\": \"https://northstar.example.org/fhir/Organization/PAY003\",\n      \"resource\": {\n        \"resourceType\": \"Organization\",\n        \"id\": \"PAY003\",\n        \"active\": true,\n        \"type\": [\n          {\n            \"text\": \"EPO\"\n          }\n        ],\n        \"name\": \"Evergreen Benefit Partners\"\n      },\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Organization/PAY003\"\n      }\n    },\n    {\n      \"fullUrl\": \"https://northstar.example.org/fhir/Coverage/COV020\",\n      \"resource\": {\n        \"resourceType\": \"Coverage\",\n        \"id\": \"COV020\",\n        \"status\": \"active\",\n        \"identifier\": [\n          {\n            \"system\": \"https://northstar.example.org/identifier/member-id\",\n            \"value\": \"MBR100020\"\n          }\n        ],\n        \"beneficiary\": {\n          \"reference\": \"Patient/PAT020\"\n        },\n        \"payor\": [\n          {\n            \"reference\": \"Organization/PAY003\"\n          }\n        ],\n        \"period\": {\n          \"start\": \"2025-01-01\",\n          \"end\": \"2026-12-31\"\n        },\n        \"class\": [\n          {\n            \"type\": {\n              \"coding\": [\n                {\n                  \"system\": \"http://terminology.hl7.org/CodeSystem/coverage-class\",\n                  \"code\": \"group\",\n                  \"display\": \"Group\"\n                }\n              ]\n            },\n            \"value\": \"GRP2020\"\n          }\n        ]\n      },\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Coverage/COV020\"\n      }\n    },\n    {\n      \"fullUrl\": \"https://northstar.example.org/fhir/ServiceRequest/AUTH0002\",\n      \"resource\": {\n        \"resourceType\": \"ServiceRequest\",\n        \"id\": \"AUTH0002\",\n        \"status\": \"completed\",\n        \"intent\": \"order\",\n        \"priority\": \"routine\",\n        \"code\": {\n          \"coding\": [\n            {\n              \"system\": \"http://www.ama-assn.org/go/cpt\",\n              \"code\": \"71260\",\n              \"display\": \"CT chest with contrast\"\n            }\n          ],\n          \"text\": \"CT chest with contrast\"\n        },\n        \"subject\": {\n          \"reference\": \"Patient/PAT020\"\n        },\n        \"requester\": {\n          \"reference\": \"Practitioner/PRV005\"\n        },\n        \"authoredOn\": \"2026-06-02T21:54:05Z\",\n        \"reasonCode\": [\n          {\n            \"coding\": [\n              {\n                \"system\": \"http://hl7.org/fhir/sid/icd-10-cm\",\n                \"code\": \"M54.16\",\n                \"display\": \"Lumbar radiculopathy\"\n              }\n            ]\n          }\n        ],\n        \"insurance\": [\n          {\n            \"reference\": \"Coverage/COV020\"\n          }\n        ]\n      },\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"ServiceRequest/AUTH0002\"\n      }\n    },\n    {\n      \"fullUrl\": \"https://northstar.example.org/fhir/Claim/AUTH0002\",\n      \"resource\": {\n        \"resourceType\": \"Claim\",\n        \"id\": \"AUTH0002\",\n        \"identifier\": [\n          {\n            \"system\": \"https://northstar.example.org/identifier/prior-authorization\",\n            \"value\": \"AUTH0002\"\n          }\n        ],\n        \"status\": \"active\",\n        \"type\": {\n          \"coding\": [\n            {\n              \"system\": \"http://terminology.hl7.org/CodeSystem/claim-type\",\n              \"code\": \"institutional\",\n              \"display\": \"Institutional\"\n            }\n          ]\n        },\n        \"use\": \"preauthorization\",\n        \"patient\": {\n          \"reference\": \"Patient/PAT020\"\n        },\n        \"created\": \"2026-06-03T13:54:05Z\",\n        \"insurer\": {\n          \"reference\": \"Organization/PAY003\"\n        },\n        \"provider\": {\n          \"reference\": \"Practitioner/PRV005\"\n        },\n        \"priority\": {\n          \"coding\": [\n            {\n              \"system\": \"http://terminology.hl7.org/CodeSystem/processpriority\",\n              \"code\": \"normal\"\n            }\n          ]\n        },\n        \"diagnosis\": [\n          {\n            \"sequence\": 1,\n            \"diagnosisCodeableConcept\": {\n              \"coding\": [\n                {\n                  \"system\": \"http://hl7.org/fhir/sid/icd-10-cm\",\n                  \"code\": \"M54.16\",\n                  \"display\": \"Lumbar radiculopathy\"\n                }\n              ]\n            }\n          }\n        ],\n        \"insurance\": [\n          {\n            \"sequence\": 1,\n            \"focal\": true,\n            \"coverage\": {\n              \"reference\": \"Coverage/COV020\"\n            }\n          }\n        ],\n        \"item\": [\n          {\n            \"sequence\": 1,\n            \"diagnosisSequence\": [\n              1\n            ],\n            \"productOrService\": {\n              \"coding\": [\n                {\n                  \"system\": \"http://www.ama-assn.org/go/cpt\",\n                  \"code\": \"71260\",\n                  \"display\": \"CT chest with contrast\"\n                }\n              ]\n            }\n          }\n        ]\n      },\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Claim/AUTH0002\"\n      }\n    },\n    {\n      \"fullUrl\": \"https://northstar.example.org/fhir/ClaimResponse/RESP-AUTH0002\",\n      \"resource\": {\n        \"resourceType\": \"ClaimResponse\",\n        \"id\": \"RESP-AUTH0002\",\n        \"status\": \"active\",\n        \"type\": {\n          \"coding\": [\n            {\n              \"system\": \"http://terminology.hl7.org/CodeSystem/claim-type\",\n              \"code\": \"institutional\",\n              \"display\": \"Institutional\"\n            }\n          ]\n        },\n        \"use\": \"preauthorization\",\n        \"patient\": {\n          \"reference\": \"Patient/PAT020\"\n        },\n        \"created\": \"2026-06-06T05:54:05Z\",\n        \"insurer\": {\n          \"reference\": \"Organization/PAY003\"\n        },\n        \"request\": {\n          \"reference\": \"Claim/AUTH0002\"\n        },\n        \"outcome\": \"complete\",\n        \"disposition\": \"Prior authorization denied: Required clinical documentation incomplete\",\n        \"item\": [\n          {\n            \"itemSequence\": 1,\n            \"adjudication\": [\n              {\n                \"category\": {\n                  \"coding\": [\n                    {\n                      \"system\": \"https://northstar.example.org/fhir/CodeSystem/prior-auth-adjudication\",\n                      \"code\": \"authorization-outcome\",\n                      \"display\": \"Prior Authorization Outcome\"\n                    }\n                  ]\n                },\n                \"reason\": {\n                  \"text\": \"Required clinical documentation incomplete\"\n                }\n              }\n            ]\n          }\n        ]\n      },\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"ClaimResponse/RESP-AUTH0002\"\n      }\n    },\n    {\n      \"fullUrl\": \"https://northstar.example.org/fhir/Task/TASK-AUTH0002\",\n      \"resource\": {\n        \"resourceType\": \"Task\",\n        \"id\": \"TASK-AUTH0002\",\n        \"status\": \"completed\",\n        \"businessStatus\": {\n          \"text\": \"Denied\"\n        },\n        \"intent\": \"order\",\n        \"code\": {\n          \"text\": \"Prior authorization management\"\n        },\n        \"description\": \"Manage prior authorization AUTH0002\",\n        \"focus\": {\n          \"reference\": \"Claim/AUTH0002\"\n        },\n        \"for\": {\n          \"reference\": \"Patient/PAT020\"\n        },\n        \"authoredOn\": \"2026-06-02T21:54:05Z\",\n        \"lastModified\": \"2026-06-06T05:54:05Z\",\n        \"requester\": {\n          \"reference\": \"Practitioner/PRV005\"\n        },\n        \"owner\": {\n          \"reference\": \"Organization/PAY003\"\n        },\n        \"note\": [\n          {\n            \"text\": \"Current operational status: Denied\"\n          }\n        ]\n      },\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Task/TASK-AUTH0002\"\n      }\n    }\n  ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}",
+          "host": [
+            "{{base_url}}"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": ""
+    },
+    {
+      "key": "patient_id",
+      "value": ""
+    },
+    {
+      "key": "authorization_id",
+      "value": ""
+    },
+    {
+      "key": "claim_response_id",
+      "value": ""
+    },
+    {
+      "key": "task_id",
+      "value": ""
+    }
+  ]
+}

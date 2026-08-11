@@ -1,0 +1,359 @@
+{
+  "resourceType": "Bundle",
+  "id": "BUNDLE-AUTH0008",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "https://northstar.example.org/fhir/Patient/PAT040",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "PAT040",
+        "identifier": [
+          {
+            "system": "https://northstar.example.org/identifier/medical-record-number",
+            "value": "MRN100040"
+          }
+        ],
+        "name": [
+          {
+            "family": "Kim",
+            "given": [
+              "Gabriel"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1985-01-13",
+        "address": [
+          {
+            "postalCode": "07054"
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/PAT040"
+      }
+    },
+    {
+      "fullUrl": "https://northstar.example.org/fhir/Practitioner/PRV009",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "PRV009",
+        "active": true,
+        "identifier": [
+          {
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "1000000009"
+          }
+        ],
+        "name": [
+          {
+            "text": "Nora Davis, MD"
+          }
+        ],
+        "qualification": [
+          {
+            "code": {
+              "text": "Pulmonology"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Practitioner/PRV009"
+      }
+    },
+    {
+      "fullUrl": "https://northstar.example.org/fhir/Organization/PAY001",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "PAY001",
+        "active": true,
+        "type": [
+          {
+            "text": "PPO"
+          }
+        ],
+        "name": "Summit Health Plan"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Organization/PAY001"
+      }
+    },
+    {
+      "fullUrl": "https://northstar.example.org/fhir/Coverage/COV040",
+      "resource": {
+        "resourceType": "Coverage",
+        "id": "COV040",
+        "status": "active",
+        "identifier": [
+          {
+            "system": "https://northstar.example.org/identifier/member-id",
+            "value": "MBR100040"
+          }
+        ],
+        "beneficiary": {
+          "reference": "Patient/PAT040"
+        },
+        "payor": [
+          {
+            "reference": "Organization/PAY001"
+          }
+        ],
+        "period": {
+          "start": "2025-01-01",
+          "end": "2026-12-31"
+        },
+        "class": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/coverage-class",
+                  "code": "group",
+                  "display": "Group"
+                }
+              ]
+            },
+            "value": "GRP2040"
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Coverage/COV040"
+      }
+    },
+    {
+      "fullUrl": "https://northstar.example.org/fhir/ServiceRequest/AUTH0008",
+      "resource": {
+        "resourceType": "ServiceRequest",
+        "id": "AUTH0008",
+        "status": "completed",
+        "intent": "order",
+        "priority": "urgent",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.ama-assn.org/go/cpt",
+              "code": "62323",
+              "display": "Lumbar epidural injection"
+            }
+          ],
+          "text": "Lumbar epidural injection"
+        },
+        "subject": {
+          "reference": "Patient/PAT040"
+        },
+        "requester": {
+          "reference": "Practitioner/PRV009"
+        },
+        "authoredOn": "2026-03-28T22:06:28Z",
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "K21.9",
+                "display": "Gastro-esophageal reflux disease"
+              }
+            ]
+          }
+        ],
+        "insurance": [
+          {
+            "reference": "Coverage/COV040"
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "ServiceRequest/AUTH0008"
+      }
+    },
+    {
+      "fullUrl": "https://northstar.example.org/fhir/Claim/AUTH0008",
+      "resource": {
+        "resourceType": "Claim",
+        "id": "AUTH0008",
+        "identifier": [
+          {
+            "system": "https://northstar.example.org/identifier/prior-authorization",
+            "value": "AUTH0008"
+          }
+        ],
+        "status": "active",
+        "type": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+              "code": "institutional",
+              "display": "Institutional"
+            }
+          ]
+        },
+        "use": "preauthorization",
+        "patient": {
+          "reference": "Patient/PAT040"
+        },
+        "created": "2026-03-29T15:06:28Z",
+        "insurer": {
+          "reference": "Organization/PAY001"
+        },
+        "provider": {
+          "reference": "Practitioner/PRV009"
+        },
+        "priority": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/processpriority",
+              "code": "stat"
+            }
+          ]
+        },
+        "diagnosis": [
+          {
+            "sequence": 1,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                  "code": "K21.9",
+                  "display": "Gastro-esophageal reflux disease"
+                }
+              ]
+            }
+          }
+        ],
+        "insurance": [
+          {
+            "sequence": 1,
+            "focal": true,
+            "coverage": {
+              "reference": "Coverage/COV040"
+            }
+          }
+        ],
+        "item": [
+          {
+            "sequence": 1,
+            "diagnosisSequence": [
+              1
+            ],
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://www.ama-assn.org/go/cpt",
+                  "code": "62323",
+                  "display": "Lumbar epidural injection"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Claim/AUTH0008"
+      }
+    },
+    {
+      "fullUrl": "https://northstar.example.org/fhir/ClaimResponse/RESP-AUTH0008",
+      "resource": {
+        "resourceType": "ClaimResponse",
+        "id": "RESP-AUTH0008",
+        "status": "active",
+        "type": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+              "code": "institutional",
+              "display": "Institutional"
+            }
+          ]
+        },
+        "use": "preauthorization",
+        "patient": {
+          "reference": "Patient/PAT040"
+        },
+        "created": "2026-03-31T19:06:28Z",
+        "insurer": {
+          "reference": "Organization/PAY001"
+        },
+        "request": {
+          "reference": "Claim/AUTH0008"
+        },
+        "outcome": "complete",
+        "disposition": "Prior authorization approved",
+        "item": [
+          {
+            "itemSequence": 1,
+            "adjudication": [
+              {
+                "category": {
+                  "coding": [
+                    {
+                      "system": "https://northstar.example.org/fhir/CodeSystem/prior-auth-adjudication",
+                      "code": "authorization-outcome",
+                      "display": "Prior Authorization Outcome"
+                    }
+                  ]
+                },
+                "reason": {
+                  "text": "Approved"
+                }
+              }
+            ]
+          }
+        ],
+        "preAuthRef": "PA-260008"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "ClaimResponse/RESP-AUTH0008"
+      }
+    },
+    {
+      "fullUrl": "https://northstar.example.org/fhir/Task/TASK-AUTH0008",
+      "resource": {
+        "resourceType": "Task",
+        "id": "TASK-AUTH0008",
+        "status": "completed",
+        "businessStatus": {
+          "text": "Approved"
+        },
+        "intent": "order",
+        "code": {
+          "text": "Prior authorization management"
+        },
+        "description": "Manage prior authorization AUTH0008",
+        "focus": {
+          "reference": "Claim/AUTH0008"
+        },
+        "for": {
+          "reference": "Patient/PAT040"
+        },
+        "authoredOn": "2026-03-28T22:06:28Z",
+        "lastModified": "2026-03-31T19:06:28Z",
+        "requester": {
+          "reference": "Practitioner/PRV009"
+        },
+        "owner": {
+          "reference": "Organization/PAY001"
+        },
+        "note": [
+          {
+            "text": "Current operational status: Approved"
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Task/TASK-AUTH0008"
+      }
+    }
+  ]
+}

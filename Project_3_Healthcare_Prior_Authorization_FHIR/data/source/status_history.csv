@@ -1,0 +1,729 @@
+status_event_id,authorization_id,status,status_at,actor_type,action_required,event_notes
+EVT000001,AUTH0001,Draft,2026-04-21 20:13:21,Authorization Specialist,0,Authorization status changed to Draft
+EVT000002,AUTH0001,Submitted,2026-04-22 15:13:21,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000003,AUTH0002,Draft,2026-06-02 21:54:05,Authorization Specialist,0,Authorization status changed to Draft
+EVT000004,AUTH0002,Submitted,2026-06-03 13:54:05,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000005,AUTH0002,In Review,2026-06-04 21:54:05,Payer,0,Authorization status changed to In Review
+EVT000006,AUTH0002,Denied,2026-06-06 05:54:05,Payer,0,Authorization status changed to Denied
+EVT000007,AUTH0003,Draft,2026-04-11 10:10:49,Authorization Specialist,0,Authorization status changed to Draft
+EVT000008,AUTH0003,Submitted,2026-04-11 14:10:49,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000009,AUTH0003,In Review,2026-04-12 09:10:49,Payer,0,Authorization status changed to In Review
+EVT000010,AUTH0004,Draft,2026-01-10 07:22:17,Authorization Specialist,0,Authorization status changed to Draft
+EVT000011,AUTH0005,Draft,2026-06-22 09:41:50,Authorization Specialist,0,Authorization status changed to Draft
+EVT000012,AUTH0005,Submitted,2026-06-23 09:41:50,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000013,AUTH0005,Additional Information Required,2026-06-24 13:41:50,Payer,1,Additional clinical documentation requested
+EVT000014,AUTH0005,Submitted,2026-06-25 08:41:50,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000015,AUTH0005,In Review,2026-06-26 13:41:50,Payer,0,Authorization status changed to In Review
+EVT000016,AUTH0006,Draft,2026-02-12 19:52:25,Authorization Specialist,0,Authorization status changed to Draft
+EVT000017,AUTH0006,Submitted,2026-02-13 13:52:25,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000018,AUTH0006,Cancelled,2026-02-14 22:52:25,Authorization Specialist,0,Authorization status changed to Cancelled
+EVT000019,AUTH0007,Draft,2026-01-27 05:24:18,Authorization Specialist,0,Authorization status changed to Draft
+EVT000020,AUTH0007,Submitted,2026-01-28 00:24:18,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000021,AUTH0007,Cancelled,2026-01-29 00:24:18,Authorization Specialist,0,Authorization status changed to Cancelled
+EVT000022,AUTH0008,Draft,2026-03-28 22:06:28,Authorization Specialist,0,Authorization status changed to Draft
+EVT000023,AUTH0008,Submitted,2026-03-29 15:06:28,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000024,AUTH0008,In Review,2026-03-30 23:06:28,Payer,0,Authorization status changed to In Review
+EVT000025,AUTH0008,Approved,2026-03-31 19:06:28,Payer,0,Authorization status changed to Approved
+EVT000026,AUTH0009,Draft,2026-05-03 00:51:33,Authorization Specialist,0,Authorization status changed to Draft
+EVT000027,AUTH0009,Submitted,2026-05-04 00:51:33,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000028,AUTH0009,In Review,2026-05-04 22:51:33,Payer,0,Authorization status changed to In Review
+EVT000029,AUTH0010,Draft,2026-01-16 23:31:08,Authorization Specialist,0,Authorization status changed to Draft
+EVT000030,AUTH0010,Submitted,2026-01-17 23:31:08,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000031,AUTH0010,Additional Information Required,2026-01-18 12:31:08,Payer,1,Additional clinical documentation requested
+EVT000032,AUTH0010,Submitted,2026-01-18 22:31:08,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000033,AUTH0010,In Review,2026-01-19 06:31:08,Payer,0,Authorization status changed to In Review
+EVT000034,AUTH0010,Approved,2026-01-20 12:31:08,Payer,0,Authorization status changed to Approved
+EVT000035,AUTH0011,Draft,2026-01-13 10:10:45,Authorization Specialist,0,Authorization status changed to Draft
+EVT000036,AUTH0011,Submitted,2026-01-14 06:10:45,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000037,AUTH0011,In Review,2026-01-14 11:10:45,Payer,0,Authorization status changed to In Review
+EVT000038,AUTH0012,Draft,2026-02-28 07:38:08,Authorization Specialist,0,Authorization status changed to Draft
+EVT000039,AUTH0012,Submitted,2026-02-28 22:38:08,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000040,AUTH0012,In Review,2026-03-01 16:38:08,Payer,0,Authorization status changed to In Review
+EVT000041,AUTH0012,Denied,2026-03-03 03:38:08,Payer,0,Authorization status changed to Denied
+EVT000042,AUTH0013,Draft,2026-03-07 14:28:37,Authorization Specialist,0,Authorization status changed to Draft
+EVT000043,AUTH0013,Submitted,2026-03-07 21:28:37,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000044,AUTH0013,In Review,2026-03-09 06:28:37,Payer,0,Authorization status changed to In Review
+EVT000045,AUTH0013,Denied,2026-03-09 18:28:37,Payer,0,Authorization status changed to Denied
+EVT000046,AUTH0014,Draft,2026-05-10 01:48:10,Authorization Specialist,0,Authorization status changed to Draft
+EVT000047,AUTH0014,Submitted,2026-05-10 07:48:10,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000048,AUTH0014,In Review,2026-05-11 16:48:10,Payer,0,Authorization status changed to In Review
+EVT000049,AUTH0014,Approved,2026-05-12 07:48:10,Payer,0,Authorization status changed to Approved
+EVT000050,AUTH0015,Draft,2026-03-30 15:03:08,Authorization Specialist,0,Authorization status changed to Draft
+EVT000051,AUTH0015,Submitted,2026-03-31 05:03:08,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000052,AUTH0015,In Review,2026-04-01 02:03:08,Payer,0,Authorization status changed to In Review
+EVT000053,AUTH0015,Approved,2026-04-02 08:03:08,Payer,0,Authorization status changed to Approved
+EVT000054,AUTH0016,Draft,2026-01-11 10:44:11,Authorization Specialist,0,Authorization status changed to Draft
+EVT000055,AUTH0016,Submitted,2026-01-12 08:44:11,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000056,AUTH0016,In Review,2026-01-12 16:44:11,Payer,0,Authorization status changed to In Review
+EVT000057,AUTH0016,Approved,2026-01-12 22:44:11,Payer,0,Authorization status changed to Approved
+EVT000058,AUTH0017,Draft,2026-01-30 22:09:11,Authorization Specialist,0,Authorization status changed to Draft
+EVT000059,AUTH0017,Cancelled,2026-01-31 09:09:11,Authorization Specialist,0,Authorization status changed to Cancelled
+EVT000060,AUTH0018,Draft,2026-02-02 21:57:14,Authorization Specialist,0,Authorization status changed to Draft
+EVT000061,AUTH0018,Submitted,2026-02-03 21:57:14,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000062,AUTH0019,Draft,2026-04-23 16:51:58,Authorization Specialist,0,Authorization status changed to Draft
+EVT000063,AUTH0019,Submitted,2026-04-24 03:51:58,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000064,AUTH0020,Draft,2026-01-16 02:10:09,Authorization Specialist,0,Authorization status changed to Draft
+EVT000065,AUTH0020,Submitted,2026-01-16 11:10:09,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000066,AUTH0020,In Review,2026-01-16 21:10:09,Payer,0,Authorization status changed to In Review
+EVT000067,AUTH0020,Approved,2026-01-17 20:10:09,Payer,0,Authorization status changed to Approved
+EVT000068,AUTH0021,Draft,2026-04-14 18:46:22,Authorization Specialist,0,Authorization status changed to Draft
+EVT000069,AUTH0021,Submitted,2026-04-15 12:46:22,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000070,AUTH0021,In Review,2026-04-16 13:46:22,Payer,0,Authorization status changed to In Review
+EVT000071,AUTH0021,Denied,2026-04-16 17:46:22,Payer,0,Authorization status changed to Denied
+EVT000072,AUTH0022,Draft,2026-05-18 16:17:49,Authorization Specialist,0,Authorization status changed to Draft
+EVT000073,AUTH0022,Submitted,2026-05-19 10:17:49,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000074,AUTH0022,Additional Information Required,2026-05-20 07:17:49,Payer,1,Additional clinical documentation requested
+EVT000075,AUTH0022,Submitted,2026-05-21 06:17:49,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000076,AUTH0022,In Review,2026-05-22 16:17:49,Payer,0,Authorization status changed to In Review
+EVT000077,AUTH0023,Draft,2026-06-15 17:16:15,Authorization Specialist,0,Authorization status changed to Draft
+EVT000078,AUTH0023,Submitted,2026-06-16 03:16:15,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000079,AUTH0023,In Review,2026-06-17 11:16:15,Payer,0,Authorization status changed to In Review
+EVT000080,AUTH0023,Approved,2026-06-18 06:16:15,Payer,0,Authorization status changed to Approved
+EVT000081,AUTH0024,Draft,2026-01-06 21:45:06,Authorization Specialist,0,Authorization status changed to Draft
+EVT000082,AUTH0024,Submitted,2026-01-07 14:45:06,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000083,AUTH0024,In Review,2026-01-08 07:45:06,Payer,0,Authorization status changed to In Review
+EVT000084,AUTH0025,Draft,2026-05-17 11:45:11,Authorization Specialist,0,Authorization status changed to Draft
+EVT000085,AUTH0025,Submitted,2026-05-18 05:45:11,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000086,AUTH0025,In Review,2026-05-18 21:45:11,Payer,0,Authorization status changed to In Review
+EVT000087,AUTH0025,Denied,2026-05-19 06:45:11,Payer,0,Authorization status changed to Denied
+EVT000088,AUTH0026,Draft,2026-05-06 18:07:32,Authorization Specialist,0,Authorization status changed to Draft
+EVT000089,AUTH0026,Submitted,2026-05-06 20:07:32,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000090,AUTH0026,In Review,2026-05-07 05:07:32,Payer,0,Authorization status changed to In Review
+EVT000091,AUTH0026,Approved,2026-05-08 03:07:32,Payer,0,Authorization status changed to Approved
+EVT000092,AUTH0027,Draft,2026-03-13 23:45:35,Authorization Specialist,0,Authorization status changed to Draft
+EVT000093,AUTH0027,Submitted,2026-03-14 14:45:35,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000094,AUTH0027,In Review,2026-03-15 15:45:35,Payer,0,Authorization status changed to In Review
+EVT000095,AUTH0028,Draft,2026-02-19 03:37:33,Authorization Specialist,0,Authorization status changed to Draft
+EVT000096,AUTH0028,Submitted,2026-02-19 15:37:33,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000097,AUTH0028,In Review,2026-02-20 02:37:33,Payer,0,Authorization status changed to In Review
+EVT000098,AUTH0028,Approved,2026-02-20 17:37:33,Payer,0,Authorization status changed to Approved
+EVT000099,AUTH0029,Draft,2026-05-28 22:49:32,Authorization Specialist,0,Authorization status changed to Draft
+EVT000100,AUTH0030,Draft,2026-03-12 09:49:39,Authorization Specialist,0,Authorization status changed to Draft
+EVT000101,AUTH0030,Submitted,2026-03-13 04:49:39,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000102,AUTH0030,Additional Information Required,2026-03-13 16:49:39,Payer,1,Additional clinical documentation requested
+EVT000103,AUTH0030,Submitted,2026-03-14 04:49:39,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000104,AUTH0030,In Review,2026-03-14 10:49:39,Payer,0,Authorization status changed to In Review
+EVT000105,AUTH0030,Denied,2026-03-14 17:49:39,Payer,0,Authorization status changed to Denied
+EVT000106,AUTH0031,Draft,2026-06-19 19:10:07,Authorization Specialist,0,Authorization status changed to Draft
+EVT000107,AUTH0032,Draft,2026-02-06 03:11:49,Authorization Specialist,0,Authorization status changed to Draft
+EVT000108,AUTH0032,Submitted,2026-02-06 20:11:49,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000109,AUTH0032,In Review,2026-02-07 07:11:49,Payer,0,Authorization status changed to In Review
+EVT000110,AUTH0032,Approved,2026-02-07 15:11:49,Payer,0,Authorization status changed to Approved
+EVT000111,AUTH0033,Draft,2026-01-30 19:05:56,Authorization Specialist,0,Authorization status changed to Draft
+EVT000112,AUTH0033,Submitted,2026-01-31 15:05:56,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000113,AUTH0033,Additional Information Required,2026-02-01 14:05:56,Payer,1,Additional clinical documentation requested
+EVT000114,AUTH0034,Draft,2026-04-29 01:38:42,Authorization Specialist,0,Authorization status changed to Draft
+EVT000115,AUTH0034,Submitted,2026-04-29 19:38:42,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000116,AUTH0034,In Review,2026-04-30 23:38:42,Payer,0,Authorization status changed to In Review
+EVT000117,AUTH0034,Approved,2026-05-02 07:38:42,Payer,0,Authorization status changed to Approved
+EVT000118,AUTH0035,Draft,2026-04-21 18:00:19,Authorization Specialist,0,Authorization status changed to Draft
+EVT000119,AUTH0035,Submitted,2026-04-22 15:00:19,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000120,AUTH0035,Additional Information Required,2026-04-23 01:00:19,Payer,1,Additional clinical documentation requested
+EVT000121,AUTH0036,Draft,2026-01-31 19:56:20,Authorization Specialist,0,Authorization status changed to Draft
+EVT000122,AUTH0036,Submitted,2026-02-01 02:56:20,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000123,AUTH0036,In Review,2026-02-01 06:56:20,Payer,0,Authorization status changed to In Review
+EVT000124,AUTH0036,Approved,2026-02-02 12:56:20,Payer,0,Authorization status changed to Approved
+EVT000125,AUTH0037,Draft,2026-01-07 16:06:45,Authorization Specialist,0,Authorization status changed to Draft
+EVT000126,AUTH0037,Submitted,2026-01-08 16:06:45,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000127,AUTH0038,Draft,2026-06-29 17:44:15,Authorization Specialist,0,Authorization status changed to Draft
+EVT000128,AUTH0038,Submitted,2026-06-30 15:44:15,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000129,AUTH0038,Additional Information Required,2026-07-01 07:44:15,Payer,1,Additional clinical documentation requested
+EVT000130,AUTH0039,Draft,2026-06-26 17:30:15,Authorization Specialist,0,Authorization status changed to Draft
+EVT000131,AUTH0039,Submitted,2026-06-26 20:30:15,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000132,AUTH0039,Additional Information Required,2026-06-27 10:30:15,Payer,1,Additional clinical documentation requested
+EVT000133,AUTH0039,Submitted,2026-06-27 23:30:15,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000134,AUTH0039,In Review,2026-06-28 21:30:15,Payer,0,Authorization status changed to In Review
+EVT000135,AUTH0039,Approved,2026-06-30 05:30:15,Payer,0,Authorization status changed to Approved
+EVT000136,AUTH0040,Draft,2026-04-08 12:22:09,Authorization Specialist,0,Authorization status changed to Draft
+EVT000137,AUTH0040,Submitted,2026-04-09 09:22:09,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000138,AUTH0040,In Review,2026-04-09 15:22:09,Payer,0,Authorization status changed to In Review
+EVT000139,AUTH0040,Approved,2026-04-10 22:22:09,Payer,0,Authorization status changed to Approved
+EVT000140,AUTH0041,Draft,2026-02-14 18:51:54,Authorization Specialist,0,Authorization status changed to Draft
+EVT000141,AUTH0041,Submitted,2026-02-15 14:51:54,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000142,AUTH0042,Draft,2026-05-29 12:20:44,Authorization Specialist,0,Authorization status changed to Draft
+EVT000143,AUTH0042,Submitted,2026-05-30 10:20:44,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000144,AUTH0042,In Review,2026-05-31 18:20:44,Payer,0,Authorization status changed to In Review
+EVT000145,AUTH0043,Draft,2026-01-19 01:13:13,Authorization Specialist,0,Authorization status changed to Draft
+EVT000146,AUTH0043,Submitted,2026-01-19 13:13:13,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000147,AUTH0043,In Review,2026-01-19 23:13:13,Payer,0,Authorization status changed to In Review
+EVT000148,AUTH0043,Approved,2026-01-20 13:13:13,Payer,0,Authorization status changed to Approved
+EVT000149,AUTH0044,Draft,2026-06-08 07:29:33,Authorization Specialist,0,Authorization status changed to Draft
+EVT000150,AUTH0044,Submitted,2026-06-08 11:29:33,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000151,AUTH0044,Additional Information Required,2026-06-09 11:29:33,Payer,1,Additional clinical documentation requested
+EVT000152,AUTH0044,Submitted,2026-06-09 23:29:33,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000153,AUTH0044,In Review,2026-06-10 23:29:33,Payer,0,Authorization status changed to In Review
+EVT000154,AUTH0045,Draft,2026-05-09 00:55:10,Authorization Specialist,0,Authorization status changed to Draft
+EVT000155,AUTH0046,Draft,2026-03-12 14:00:50,Authorization Specialist,0,Authorization status changed to Draft
+EVT000156,AUTH0046,Submitted,2026-03-13 06:00:50,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000157,AUTH0046,In Review,2026-03-13 13:00:50,Payer,0,Authorization status changed to In Review
+EVT000158,AUTH0046,Approved,2026-03-14 06:00:50,Payer,0,Authorization status changed to Approved
+EVT000159,AUTH0047,Draft,2026-06-21 09:02:33,Authorization Specialist,0,Authorization status changed to Draft
+EVT000160,AUTH0047,Submitted,2026-06-22 07:02:33,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000161,AUTH0047,Additional Information Required,2026-06-23 02:02:33,Payer,1,Additional clinical documentation requested
+EVT000162,AUTH0047,Submitted,2026-06-23 11:02:33,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000163,AUTH0047,In Review,2026-06-24 10:02:33,Payer,0,Authorization status changed to In Review
+EVT000164,AUTH0048,Draft,2026-02-13 23:10:51,Authorization Specialist,0,Authorization status changed to Draft
+EVT000165,AUTH0048,Submitted,2026-02-14 15:10:51,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000166,AUTH0048,In Review,2026-02-15 02:10:51,Payer,0,Authorization status changed to In Review
+EVT000167,AUTH0048,Approved,2026-02-15 15:10:51,Payer,0,Authorization status changed to Approved
+EVT000168,AUTH0049,Draft,2026-03-23 00:19:31,Authorization Specialist,0,Authorization status changed to Draft
+EVT000169,AUTH0049,Submitted,2026-03-23 09:19:31,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000170,AUTH0049,Cancelled,2026-03-24 18:19:31,Authorization Specialist,0,Authorization status changed to Cancelled
+EVT000171,AUTH0050,Draft,2026-04-10 00:34:27,Authorization Specialist,0,Authorization status changed to Draft
+EVT000172,AUTH0050,Submitted,2026-04-10 04:34:27,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000173,AUTH0050,Additional Information Required,2026-04-11 01:34:27,Payer,1,Additional clinical documentation requested
+EVT000174,AUTH0050,Submitted,2026-04-11 18:34:27,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000175,AUTH0050,In Review,2026-04-12 19:34:27,Payer,0,Authorization status changed to In Review
+EVT000176,AUTH0050,Approved,2026-04-14 07:34:27,Payer,0,Authorization status changed to Approved
+EVT000177,AUTH0051,Draft,2026-04-23 22:38:19,Authorization Specialist,0,Authorization status changed to Draft
+EVT000178,AUTH0051,Submitted,2026-04-24 15:38:19,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000179,AUTH0051,Additional Information Required,2026-04-25 04:38:19,Payer,1,Additional clinical documentation requested
+EVT000180,AUTH0052,Draft,2026-04-18 12:07:17,Authorization Specialist,0,Authorization status changed to Draft
+EVT000181,AUTH0052,Submitted,2026-04-19 00:07:17,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000182,AUTH0052,In Review,2026-04-19 16:07:17,Payer,0,Authorization status changed to In Review
+EVT000183,AUTH0052,Approved,2026-04-20 11:07:17,Payer,0,Authorization status changed to Approved
+EVT000184,AUTH0053,Draft,2026-03-04 02:48:32,Authorization Specialist,0,Authorization status changed to Draft
+EVT000185,AUTH0053,Submitted,2026-03-04 16:48:32,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000186,AUTH0053,In Review,2026-03-05 20:48:32,Payer,0,Authorization status changed to In Review
+EVT000187,AUTH0053,Approved,2026-03-06 09:48:32,Payer,0,Authorization status changed to Approved
+EVT000188,AUTH0054,Draft,2026-03-06 19:12:26,Authorization Specialist,0,Authorization status changed to Draft
+EVT000189,AUTH0054,Submitted,2026-03-07 11:12:26,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000190,AUTH0054,Additional Information Required,2026-03-07 21:12:26,Payer,1,Additional clinical documentation requested
+EVT000191,AUTH0055,Draft,2026-06-19 10:50:30,Authorization Specialist,0,Authorization status changed to Draft
+EVT000192,AUTH0055,Submitted,2026-06-20 03:50:30,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000193,AUTH0055,Additional Information Required,2026-06-20 23:50:30,Payer,1,Additional clinical documentation requested
+EVT000194,AUTH0055,Submitted,2026-06-21 13:50:30,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000195,AUTH0055,In Review,2026-06-22 18:50:30,Payer,0,Authorization status changed to In Review
+EVT000196,AUTH0055,Approved,2026-06-23 03:50:30,Payer,0,Authorization status changed to Approved
+EVT000197,AUTH0056,Draft,2026-05-03 01:05:45,Authorization Specialist,0,Authorization status changed to Draft
+EVT000198,AUTH0056,Submitted,2026-05-03 20:05:45,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000199,AUTH0056,In Review,2026-05-04 02:05:45,Payer,0,Authorization status changed to In Review
+EVT000200,AUTH0056,Approved,2026-05-04 10:05:45,Payer,0,Authorization status changed to Approved
+EVT000201,AUTH0057,Draft,2026-03-26 14:27:13,Authorization Specialist,0,Authorization status changed to Draft
+EVT000202,AUTH0057,Submitted,2026-03-27 12:27:13,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000203,AUTH0058,Draft,2026-01-10 06:20:00,Authorization Specialist,0,Authorization status changed to Draft
+EVT000204,AUTH0058,Submitted,2026-01-10 19:20:00,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000205,AUTH0058,Additional Information Required,2026-01-11 22:20:00,Payer,1,Additional clinical documentation requested
+EVT000206,AUTH0058,Submitted,2026-01-12 15:20:00,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000207,AUTH0058,In Review,2026-01-13 04:20:00,Payer,0,Authorization status changed to In Review
+EVT000208,AUTH0058,Denied,2026-01-13 23:20:00,Payer,0,Authorization status changed to Denied
+EVT000209,AUTH0059,Draft,2026-01-16 16:01:09,Authorization Specialist,0,Authorization status changed to Draft
+EVT000210,AUTH0059,Submitted,2026-01-17 06:01:09,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000211,AUTH0059,Additional Information Required,2026-01-18 01:01:09,Payer,1,Additional clinical documentation requested
+EVT000212,AUTH0060,Draft,2026-05-05 04:51:03,Authorization Specialist,0,Authorization status changed to Draft
+EVT000213,AUTH0060,Submitted,2026-05-05 06:51:03,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000214,AUTH0060,In Review,2026-05-06 15:51:03,Payer,0,Authorization status changed to In Review
+EVT000215,AUTH0060,Approved,2026-05-07 13:51:03,Payer,0,Authorization status changed to Approved
+EVT000216,AUTH0061,Draft,2026-04-25 10:16:57,Authorization Specialist,0,Authorization status changed to Draft
+EVT000217,AUTH0061,Submitted,2026-04-26 10:16:57,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000218,AUTH0061,In Review,2026-04-27 06:16:57,Payer,0,Authorization status changed to In Review
+EVT000219,AUTH0061,Denied,2026-04-28 15:16:57,Payer,0,Authorization status changed to Denied
+EVT000220,AUTH0062,Draft,2026-03-16 09:17:11,Authorization Specialist,0,Authorization status changed to Draft
+EVT000221,AUTH0062,Submitted,2026-03-17 09:17:11,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000222,AUTH0062,In Review,2026-03-18 07:17:11,Payer,0,Authorization status changed to In Review
+EVT000223,AUTH0062,Approved,2026-03-18 12:17:11,Payer,0,Authorization status changed to Approved
+EVT000224,AUTH0063,Draft,2026-06-27 03:46:57,Authorization Specialist,0,Authorization status changed to Draft
+EVT000225,AUTH0063,Submitted,2026-06-27 14:46:57,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000226,AUTH0063,In Review,2026-06-28 08:46:57,Payer,0,Authorization status changed to In Review
+EVT000227,AUTH0064,Draft,2026-02-19 00:00:19,Authorization Specialist,0,Authorization status changed to Draft
+EVT000228,AUTH0064,Submitted,2026-02-19 23:00:19,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000229,AUTH0064,In Review,2026-02-20 11:00:19,Payer,0,Authorization status changed to In Review
+EVT000230,AUTH0065,Draft,2026-01-07 19:29:23,Authorization Specialist,0,Authorization status changed to Draft
+EVT000231,AUTH0065,Submitted,2026-01-07 23:29:23,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000232,AUTH0065,In Review,2026-01-08 21:29:23,Payer,0,Authorization status changed to In Review
+EVT000233,AUTH0065,Denied,2026-01-09 21:29:23,Payer,0,Authorization status changed to Denied
+EVT000234,AUTH0066,Draft,2026-04-14 09:57:04,Authorization Specialist,0,Authorization status changed to Draft
+EVT000235,AUTH0066,Submitted,2026-04-14 19:57:04,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000236,AUTH0067,Draft,2026-06-06 11:59:43,Authorization Specialist,0,Authorization status changed to Draft
+EVT000237,AUTH0067,Submitted,2026-06-06 17:59:43,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000238,AUTH0067,In Review,2026-06-07 11:59:43,Payer,0,Authorization status changed to In Review
+EVT000239,AUTH0067,Denied,2026-06-08 16:59:43,Payer,0,Authorization status changed to Denied
+EVT000240,AUTH0068,Draft,2026-04-15 12:36:29,Authorization Specialist,0,Authorization status changed to Draft
+EVT000241,AUTH0068,Submitted,2026-04-16 11:36:29,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000242,AUTH0068,In Review,2026-04-17 07:36:29,Payer,0,Authorization status changed to In Review
+EVT000243,AUTH0068,Approved,2026-04-18 11:36:29,Payer,0,Authorization status changed to Approved
+EVT000244,AUTH0069,Draft,2026-05-01 15:17:51,Authorization Specialist,0,Authorization status changed to Draft
+EVT000245,AUTH0069,Submitted,2026-05-02 12:17:51,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000246,AUTH0069,In Review,2026-05-03 06:17:51,Payer,0,Authorization status changed to In Review
+EVT000247,AUTH0069,Approved,2026-05-03 14:17:51,Payer,0,Authorization status changed to Approved
+EVT000248,AUTH0070,Draft,2026-01-28 11:24:29,Authorization Specialist,0,Authorization status changed to Draft
+EVT000249,AUTH0070,Cancelled,2026-01-29 22:24:29,Authorization Specialist,0,Authorization status changed to Cancelled
+EVT000250,AUTH0071,Draft,2026-03-17 19:13:15,Authorization Specialist,0,Authorization status changed to Draft
+EVT000251,AUTH0071,Submitted,2026-03-18 19:13:15,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000252,AUTH0071,In Review,2026-03-20 01:13:15,Payer,0,Authorization status changed to In Review
+EVT000253,AUTH0071,Approved,2026-03-20 14:13:15,Payer,0,Authorization status changed to Approved
+EVT000254,AUTH0072,Draft,2026-03-21 13:57:28,Authorization Specialist,0,Authorization status changed to Draft
+EVT000255,AUTH0072,Submitted,2026-03-22 13:57:28,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000256,AUTH0072,In Review,2026-03-23 16:57:28,Payer,0,Authorization status changed to In Review
+EVT000257,AUTH0072,Approved,2026-03-24 09:57:28,Payer,0,Authorization status changed to Approved
+EVT000258,AUTH0073,Draft,2026-05-14 11:30:05,Authorization Specialist,0,Authorization status changed to Draft
+EVT000259,AUTH0073,Submitted,2026-05-15 09:30:05,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000260,AUTH0073,In Review,2026-05-16 11:30:05,Payer,0,Authorization status changed to In Review
+EVT000261,AUTH0074,Draft,2026-06-15 00:07:15,Authorization Specialist,0,Authorization status changed to Draft
+EVT000262,AUTH0074,Submitted,2026-06-15 08:07:15,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000263,AUTH0074,Additional Information Required,2026-06-15 13:07:15,Payer,1,Additional clinical documentation requested
+EVT000264,AUTH0074,Submitted,2026-06-15 18:07:15,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000265,AUTH0074,In Review,2026-06-16 19:07:15,Payer,0,Authorization status changed to In Review
+EVT000266,AUTH0074,Approved,2026-06-17 14:07:15,Payer,0,Authorization status changed to Approved
+EVT000267,AUTH0075,Draft,2026-02-10 13:25:23,Authorization Specialist,0,Authorization status changed to Draft
+EVT000268,AUTH0075,Submitted,2026-02-10 22:25:23,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000269,AUTH0075,In Review,2026-02-11 23:25:23,Payer,0,Authorization status changed to In Review
+EVT000270,AUTH0075,Denied,2026-02-12 12:25:23,Payer,0,Authorization status changed to Denied
+EVT000271,AUTH0076,Draft,2026-02-19 00:07:59,Authorization Specialist,0,Authorization status changed to Draft
+EVT000272,AUTH0076,Submitted,2026-02-19 02:07:59,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000273,AUTH0076,Additional Information Required,2026-02-19 14:07:59,Payer,1,Additional clinical documentation requested
+EVT000274,AUTH0076,Submitted,2026-02-19 18:07:59,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000275,AUTH0076,In Review,2026-02-20 20:07:59,Payer,0,Authorization status changed to In Review
+EVT000276,AUTH0076,Denied,2026-02-21 15:07:59,Payer,0,Authorization status changed to Denied
+EVT000277,AUTH0077,Draft,2026-01-25 22:44:15,Authorization Specialist,0,Authorization status changed to Draft
+EVT000278,AUTH0077,Submitted,2026-01-26 16:44:15,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000279,AUTH0078,Draft,2026-06-01 09:49:19,Authorization Specialist,0,Authorization status changed to Draft
+EVT000280,AUTH0078,Submitted,2026-06-02 01:49:19,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000281,AUTH0078,In Review,2026-06-03 13:49:19,Payer,0,Authorization status changed to In Review
+EVT000282,AUTH0078,Denied,2026-06-04 07:49:19,Payer,0,Authorization status changed to Denied
+EVT000283,AUTH0079,Draft,2026-05-06 06:11:05,Authorization Specialist,0,Authorization status changed to Draft
+EVT000284,AUTH0079,Submitted,2026-05-06 23:11:05,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000285,AUTH0079,Additional Information Required,2026-05-08 04:11:05,Payer,1,Additional clinical documentation requested
+EVT000286,AUTH0079,Submitted,2026-05-08 21:11:05,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000287,AUTH0079,In Review,2026-05-09 07:11:05,Payer,0,Authorization status changed to In Review
+EVT000288,AUTH0079,Denied,2026-05-10 18:11:05,Payer,0,Authorization status changed to Denied
+EVT000289,AUTH0080,Draft,2026-01-14 02:06:05,Authorization Specialist,0,Authorization status changed to Draft
+EVT000290,AUTH0080,Submitted,2026-01-14 22:06:05,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000291,AUTH0080,In Review,2026-01-15 22:06:05,Payer,0,Authorization status changed to In Review
+EVT000292,AUTH0081,Draft,2026-04-09 12:02:19,Authorization Specialist,0,Authorization status changed to Draft
+EVT000293,AUTH0081,Submitted,2026-04-10 12:02:19,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000294,AUTH0081,Additional Information Required,2026-04-10 23:02:19,Payer,1,Additional clinical documentation requested
+EVT000295,AUTH0081,Submitted,2026-04-11 23:02:19,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000296,AUTH0081,In Review,2026-04-12 16:02:19,Payer,0,Authorization status changed to In Review
+EVT000297,AUTH0081,Denied,2026-04-13 23:02:19,Payer,0,Authorization status changed to Denied
+EVT000298,AUTH0082,Draft,2026-03-23 02:39:08,Authorization Specialist,0,Authorization status changed to Draft
+EVT000299,AUTH0082,Submitted,2026-03-23 14:39:08,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000300,AUTH0082,In Review,2026-03-24 10:39:08,Payer,0,Authorization status changed to In Review
+EVT000301,AUTH0082,Approved,2026-03-25 13:39:08,Payer,0,Authorization status changed to Approved
+EVT000302,AUTH0083,Draft,2026-06-11 20:20:16,Authorization Specialist,0,Authorization status changed to Draft
+EVT000303,AUTH0083,Submitted,2026-06-12 09:20:16,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000304,AUTH0083,In Review,2026-06-12 21:20:16,Payer,0,Authorization status changed to In Review
+EVT000305,AUTH0084,Draft,2026-03-06 08:15:41,Authorization Specialist,0,Authorization status changed to Draft
+EVT000306,AUTH0084,Submitted,2026-03-07 07:15:41,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000307,AUTH0084,In Review,2026-03-08 14:15:41,Payer,0,Authorization status changed to In Review
+EVT000308,AUTH0084,Approved,2026-03-08 21:15:41,Payer,0,Authorization status changed to Approved
+EVT000309,AUTH0085,Draft,2026-04-23 13:17:43,Authorization Specialist,0,Authorization status changed to Draft
+EVT000310,AUTH0085,Submitted,2026-04-24 06:17:43,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000311,AUTH0085,Additional Information Required,2026-04-25 00:17:43,Payer,1,Additional clinical documentation requested
+EVT000312,AUTH0085,Submitted,2026-04-25 07:17:43,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000313,AUTH0085,In Review,2026-04-26 09:17:43,Payer,0,Authorization status changed to In Review
+EVT000314,AUTH0086,Draft,2026-02-14 05:58:39,Authorization Specialist,0,Authorization status changed to Draft
+EVT000315,AUTH0086,Submitted,2026-02-15 02:58:39,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000316,AUTH0086,In Review,2026-02-15 07:58:39,Payer,0,Authorization status changed to In Review
+EVT000317,AUTH0086,Approved,2026-02-16 04:58:39,Payer,0,Authorization status changed to Approved
+EVT000318,AUTH0087,Draft,2026-03-10 11:53:15,Authorization Specialist,0,Authorization status changed to Draft
+EVT000319,AUTH0087,Submitted,2026-03-11 07:53:15,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000320,AUTH0087,In Review,2026-03-12 12:53:15,Payer,0,Authorization status changed to In Review
+EVT000321,AUTH0088,Draft,2026-02-12 02:35:30,Authorization Specialist,0,Authorization status changed to Draft
+EVT000322,AUTH0088,Submitted,2026-02-12 09:35:30,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000323,AUTH0088,In Review,2026-02-13 12:35:30,Payer,0,Authorization status changed to In Review
+EVT000324,AUTH0088,Approved,2026-02-14 11:35:30,Payer,0,Authorization status changed to Approved
+EVT000325,AUTH0089,Draft,2026-06-21 20:40:22,Authorization Specialist,0,Authorization status changed to Draft
+EVT000326,AUTH0089,Submitted,2026-06-22 03:40:22,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000327,AUTH0089,Additional Information Required,2026-06-22 10:40:22,Payer,1,Additional clinical documentation requested
+EVT000328,AUTH0090,Draft,2026-04-29 05:10:45,Authorization Specialist,0,Authorization status changed to Draft
+EVT000329,AUTH0090,Submitted,2026-04-29 23:10:45,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000330,AUTH0090,In Review,2026-04-30 10:10:45,Payer,0,Authorization status changed to In Review
+EVT000331,AUTH0091,Draft,2026-04-05 19:52:22,Authorization Specialist,0,Authorization status changed to Draft
+EVT000332,AUTH0091,Submitted,2026-04-06 04:52:22,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000333,AUTH0091,In Review,2026-04-07 09:52:22,Payer,0,Authorization status changed to In Review
+EVT000334,AUTH0091,Denied,2026-04-07 16:52:22,Payer,0,Authorization status changed to Denied
+EVT000335,AUTH0092,Draft,2026-02-26 12:55:17,Authorization Specialist,0,Authorization status changed to Draft
+EVT000336,AUTH0092,Submitted,2026-02-27 03:55:17,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000337,AUTH0092,Additional Information Required,2026-02-27 18:55:17,Payer,1,Additional clinical documentation requested
+EVT000338,AUTH0092,Submitted,2026-02-28 02:55:17,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000339,AUTH0092,In Review,2026-03-01 06:55:17,Payer,0,Authorization status changed to In Review
+EVT000340,AUTH0093,Draft,2026-06-12 03:42:43,Authorization Specialist,0,Authorization status changed to Draft
+EVT000341,AUTH0093,Submitted,2026-06-12 17:42:43,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000342,AUTH0093,In Review,2026-06-12 23:42:43,Payer,0,Authorization status changed to In Review
+EVT000343,AUTH0093,Denied,2026-06-14 06:42:43,Payer,0,Authorization status changed to Denied
+EVT000344,AUTH0094,Draft,2026-04-22 16:14:10,Authorization Specialist,0,Authorization status changed to Draft
+EVT000345,AUTH0094,Submitted,2026-04-23 03:14:10,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000346,AUTH0094,In Review,2026-04-23 14:14:10,Payer,0,Authorization status changed to In Review
+EVT000347,AUTH0094,Approved,2026-04-24 19:14:10,Payer,0,Authorization status changed to Approved
+EVT000348,AUTH0095,Draft,2026-06-11 21:31:18,Authorization Specialist,0,Authorization status changed to Draft
+EVT000349,AUTH0095,Submitted,2026-06-12 12:31:18,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000350,AUTH0095,In Review,2026-06-12 22:31:18,Payer,0,Authorization status changed to In Review
+EVT000351,AUTH0096,Draft,2026-01-16 14:31:19,Authorization Specialist,0,Authorization status changed to Draft
+EVT000352,AUTH0096,Cancelled,2026-01-17 15:31:19,Authorization Specialist,0,Authorization status changed to Cancelled
+EVT000353,AUTH0097,Draft,2026-05-04 07:02:27,Authorization Specialist,0,Authorization status changed to Draft
+EVT000354,AUTH0097,Submitted,2026-05-04 20:02:27,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000355,AUTH0097,In Review,2026-05-05 22:02:27,Payer,0,Authorization status changed to In Review
+EVT000356,AUTH0097,Approved,2026-05-06 11:02:27,Payer,0,Authorization status changed to Approved
+EVT000357,AUTH0098,Draft,2026-02-04 00:33:50,Authorization Specialist,0,Authorization status changed to Draft
+EVT000358,AUTH0098,Submitted,2026-02-04 22:33:50,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000359,AUTH0098,In Review,2026-02-05 06:33:50,Payer,0,Authorization status changed to In Review
+EVT000360,AUTH0098,Denied,2026-02-05 21:33:50,Payer,0,Authorization status changed to Denied
+EVT000361,AUTH0099,Draft,2026-05-13 14:18:43,Authorization Specialist,0,Authorization status changed to Draft
+EVT000362,AUTH0099,Submitted,2026-05-14 12:18:43,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000363,AUTH0099,In Review,2026-05-15 12:18:43,Payer,0,Authorization status changed to In Review
+EVT000364,AUTH0099,Approved,2026-05-16 12:18:43,Payer,0,Authorization status changed to Approved
+EVT000365,AUTH0100,Draft,2026-05-03 22:28:04,Authorization Specialist,0,Authorization status changed to Draft
+EVT000366,AUTH0100,Submitted,2026-05-04 08:28:04,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000367,AUTH0101,Draft,2026-03-02 14:36:19,Authorization Specialist,0,Authorization status changed to Draft
+EVT000368,AUTH0101,Submitted,2026-03-03 03:36:19,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000369,AUTH0101,Additional Information Required,2026-03-04 01:36:19,Payer,1,Additional clinical documentation requested
+EVT000370,AUTH0101,Submitted,2026-03-04 07:36:19,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000371,AUTH0101,In Review,2026-03-04 16:36:19,Payer,0,Authorization status changed to In Review
+EVT000372,AUTH0101,Approved,2026-03-06 04:36:19,Payer,0,Authorization status changed to Approved
+EVT000373,AUTH0102,Draft,2026-03-29 15:54:39,Authorization Specialist,0,Authorization status changed to Draft
+EVT000374,AUTH0102,Submitted,2026-03-29 23:54:39,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000375,AUTH0102,In Review,2026-03-30 23:54:39,Payer,0,Authorization status changed to In Review
+EVT000376,AUTH0103,Draft,2026-03-29 19:35:23,Authorization Specialist,0,Authorization status changed to Draft
+EVT000377,AUTH0103,Submitted,2026-03-30 07:35:23,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000378,AUTH0103,In Review,2026-03-30 16:35:23,Payer,0,Authorization status changed to In Review
+EVT000379,AUTH0103,Approved,2026-04-01 04:35:23,Payer,0,Authorization status changed to Approved
+EVT000380,AUTH0104,Draft,2026-04-13 02:20:11,Authorization Specialist,0,Authorization status changed to Draft
+EVT000381,AUTH0104,Submitted,2026-04-13 09:20:11,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000382,AUTH0104,Additional Information Required,2026-04-14 12:20:11,Payer,1,Additional clinical documentation requested
+EVT000383,AUTH0105,Draft,2026-05-13 03:53:33,Authorization Specialist,0,Authorization status changed to Draft
+EVT000384,AUTH0105,Submitted,2026-05-14 01:53:33,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000385,AUTH0105,In Review,2026-05-15 02:53:33,Payer,0,Authorization status changed to In Review
+EVT000386,AUTH0106,Draft,2026-02-25 12:13:15,Authorization Specialist,0,Authorization status changed to Draft
+EVT000387,AUTH0106,Submitted,2026-02-26 09:13:15,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000388,AUTH0106,In Review,2026-02-26 22:13:15,Payer,0,Authorization status changed to In Review
+EVT000389,AUTH0106,Approved,2026-02-27 23:13:15,Payer,0,Authorization status changed to Approved
+EVT000390,AUTH0107,Draft,2026-05-08 17:26:11,Authorization Specialist,0,Authorization status changed to Draft
+EVT000391,AUTH0107,Submitted,2026-05-09 14:26:11,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000392,AUTH0107,In Review,2026-05-09 23:26:11,Payer,0,Authorization status changed to In Review
+EVT000393,AUTH0107,Approved,2026-05-10 22:26:11,Payer,0,Authorization status changed to Approved
+EVT000394,AUTH0108,Draft,2026-01-19 11:31:20,Authorization Specialist,0,Authorization status changed to Draft
+EVT000395,AUTH0108,Submitted,2026-01-20 00:31:20,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000396,AUTH0108,In Review,2026-01-20 05:31:20,Payer,0,Authorization status changed to In Review
+EVT000397,AUTH0108,Denied,2026-01-21 08:31:20,Payer,0,Authorization status changed to Denied
+EVT000398,AUTH0109,Draft,2026-02-14 07:46:01,Authorization Specialist,0,Authorization status changed to Draft
+EVT000399,AUTH0109,Submitted,2026-02-14 18:46:01,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000400,AUTH0109,Additional Information Required,2026-02-15 04:46:01,Payer,1,Additional clinical documentation requested
+EVT000401,AUTH0109,Submitted,2026-02-16 00:46:01,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000402,AUTH0109,In Review,2026-02-16 06:46:01,Payer,0,Authorization status changed to In Review
+EVT000403,AUTH0109,Approved,2026-02-17 07:46:01,Payer,0,Authorization status changed to Approved
+EVT000404,AUTH0110,Draft,2026-02-05 10:48:11,Authorization Specialist,0,Authorization status changed to Draft
+EVT000405,AUTH0110,Submitted,2026-02-06 07:48:11,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000406,AUTH0111,Draft,2026-03-13 01:45:29,Authorization Specialist,0,Authorization status changed to Draft
+EVT000407,AUTH0111,Submitted,2026-03-13 17:45:29,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000408,AUTH0111,Additional Information Required,2026-03-14 15:45:29,Payer,1,Additional clinical documentation requested
+EVT000409,AUTH0111,Submitted,2026-03-15 09:45:29,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000410,AUTH0111,In Review,2026-03-16 03:45:29,Payer,0,Authorization status changed to In Review
+EVT000411,AUTH0111,Approved,2026-03-16 22:45:29,Payer,0,Authorization status changed to Approved
+EVT000412,AUTH0112,Draft,2026-03-27 21:19:57,Authorization Specialist,0,Authorization status changed to Draft
+EVT000413,AUTH0112,Submitted,2026-03-28 11:19:57,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000414,AUTH0112,In Review,2026-03-29 23:19:57,Payer,0,Authorization status changed to In Review
+EVT000415,AUTH0112,Denied,2026-03-31 05:19:57,Payer,0,Authorization status changed to Denied
+EVT000416,AUTH0113,Draft,2026-05-05 20:06:39,Authorization Specialist,0,Authorization status changed to Draft
+EVT000417,AUTH0113,Submitted,2026-05-06 01:06:39,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000418,AUTH0113,In Review,2026-05-06 12:06:39,Payer,0,Authorization status changed to In Review
+EVT000419,AUTH0113,Approved,2026-05-07 10:06:39,Payer,0,Authorization status changed to Approved
+EVT000420,AUTH0114,Draft,2026-06-26 03:01:57,Authorization Specialist,0,Authorization status changed to Draft
+EVT000421,AUTH0114,Submitted,2026-06-26 07:01:57,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000422,AUTH0114,In Review,2026-06-27 01:01:57,Payer,0,Authorization status changed to In Review
+EVT000423,AUTH0114,Approved,2026-06-28 09:01:57,Payer,0,Authorization status changed to Approved
+EVT000424,AUTH0115,Draft,2026-04-08 19:31:21,Authorization Specialist,0,Authorization status changed to Draft
+EVT000425,AUTH0115,Submitted,2026-04-08 23:31:21,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000426,AUTH0115,In Review,2026-04-10 02:31:21,Payer,0,Authorization status changed to In Review
+EVT000427,AUTH0115,Approved,2026-04-10 20:31:21,Payer,0,Authorization status changed to Approved
+EVT000428,AUTH0116,Draft,2026-01-28 01:15:38,Authorization Specialist,0,Authorization status changed to Draft
+EVT000429,AUTH0116,Submitted,2026-01-28 18:15:38,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000430,AUTH0116,In Review,2026-01-29 06:15:38,Payer,0,Authorization status changed to In Review
+EVT000431,AUTH0116,Approved,2026-01-30 16:15:38,Payer,0,Authorization status changed to Approved
+EVT000432,AUTH0117,Draft,2026-02-20 00:41:31,Authorization Specialist,0,Authorization status changed to Draft
+EVT000433,AUTH0117,Submitted,2026-02-20 06:41:31,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000434,AUTH0117,Additional Information Required,2026-02-21 13:41:31,Payer,1,Additional clinical documentation requested
+EVT000435,AUTH0118,Draft,2026-01-24 23:51:16,Authorization Specialist,0,Authorization status changed to Draft
+EVT000436,AUTH0118,Submitted,2026-01-25 20:51:16,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000437,AUTH0118,In Review,2026-01-27 05:51:16,Payer,0,Authorization status changed to In Review
+EVT000438,AUTH0118,Denied,2026-01-27 13:51:16,Payer,0,Authorization status changed to Denied
+EVT000439,AUTH0119,Draft,2026-04-22 23:54:55,Authorization Specialist,0,Authorization status changed to Draft
+EVT000440,AUTH0119,Cancelled,2026-04-24 06:54:55,Authorization Specialist,0,Authorization status changed to Cancelled
+EVT000441,AUTH0120,Draft,2026-03-23 05:20:44,Authorization Specialist,0,Authorization status changed to Draft
+EVT000442,AUTH0120,Submitted,2026-03-23 23:20:44,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000443,AUTH0120,In Review,2026-03-25 02:20:44,Payer,0,Authorization status changed to In Review
+EVT000444,AUTH0120,Approved,2026-03-25 10:20:44,Payer,0,Authorization status changed to Approved
+EVT000445,AUTH0121,Draft,2026-01-05 06:45:53,Authorization Specialist,0,Authorization status changed to Draft
+EVT000446,AUTH0121,Cancelled,2026-01-06 10:45:53,Authorization Specialist,0,Authorization status changed to Cancelled
+EVT000447,AUTH0122,Draft,2026-03-09 06:53:45,Authorization Specialist,0,Authorization status changed to Draft
+EVT000448,AUTH0122,Submitted,2026-03-09 11:53:45,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000449,AUTH0122,Cancelled,2026-03-10 12:53:45,Authorization Specialist,0,Authorization status changed to Cancelled
+EVT000450,AUTH0123,Draft,2026-06-08 07:13:33,Authorization Specialist,0,Authorization status changed to Draft
+EVT000451,AUTH0123,Submitted,2026-06-09 06:13:33,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000452,AUTH0123,Additional Information Required,2026-06-10 15:13:33,Payer,1,Additional clinical documentation requested
+EVT000453,AUTH0124,Draft,2026-05-20 09:00:42,Authorization Specialist,0,Authorization status changed to Draft
+EVT000454,AUTH0124,Submitted,2026-05-20 20:00:42,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000455,AUTH0124,In Review,2026-05-21 12:00:42,Payer,0,Authorization status changed to In Review
+EVT000456,AUTH0124,Denied,2026-05-21 18:00:42,Payer,0,Authorization status changed to Denied
+EVT000457,AUTH0125,Draft,2026-06-08 16:04:03,Authorization Specialist,0,Authorization status changed to Draft
+EVT000458,AUTH0125,Submitted,2026-06-09 14:04:03,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000459,AUTH0125,In Review,2026-06-10 06:04:03,Payer,0,Authorization status changed to In Review
+EVT000460,AUTH0125,Approved,2026-06-11 04:04:03,Payer,0,Authorization status changed to Approved
+EVT000461,AUTH0126,Draft,2026-01-25 12:05:44,Authorization Specialist,0,Authorization status changed to Draft
+EVT000462,AUTH0126,Submitted,2026-01-26 02:05:44,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000463,AUTH0126,In Review,2026-01-27 10:05:44,Payer,0,Authorization status changed to In Review
+EVT000464,AUTH0126,Denied,2026-01-28 14:05:44,Payer,0,Authorization status changed to Denied
+EVT000465,AUTH0127,Draft,2026-02-22 03:00:30,Authorization Specialist,0,Authorization status changed to Draft
+EVT000466,AUTH0127,Submitted,2026-02-22 07:00:30,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000467,AUTH0127,In Review,2026-02-23 14:00:30,Payer,0,Authorization status changed to In Review
+EVT000468,AUTH0127,Approved,2026-02-24 05:00:30,Payer,0,Authorization status changed to Approved
+EVT000469,AUTH0128,Draft,2026-03-06 00:13:03,Authorization Specialist,0,Authorization status changed to Draft
+EVT000470,AUTH0128,Submitted,2026-03-06 21:13:03,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000471,AUTH0128,In Review,2026-03-08 04:13:03,Payer,0,Authorization status changed to In Review
+EVT000472,AUTH0128,Approved,2026-03-08 18:13:03,Payer,0,Authorization status changed to Approved
+EVT000473,AUTH0129,Draft,2026-04-30 17:24:56,Authorization Specialist,0,Authorization status changed to Draft
+EVT000474,AUTH0129,Submitted,2026-04-30 20:24:56,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000475,AUTH0129,In Review,2026-05-01 04:24:56,Payer,0,Authorization status changed to In Review
+EVT000476,AUTH0129,Approved,2026-05-02 09:24:56,Payer,0,Authorization status changed to Approved
+EVT000477,AUTH0130,Draft,2026-06-15 03:05:08,Authorization Specialist,0,Authorization status changed to Draft
+EVT000478,AUTH0130,Submitted,2026-06-15 06:05:08,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000479,AUTH0130,In Review,2026-06-15 18:05:08,Payer,0,Authorization status changed to In Review
+EVT000480,AUTH0130,Approved,2026-06-16 02:05:08,Payer,0,Authorization status changed to Approved
+EVT000481,AUTH0131,Draft,2026-04-21 11:33:05,Authorization Specialist,0,Authorization status changed to Draft
+EVT000482,AUTH0131,Submitted,2026-04-22 03:33:05,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000483,AUTH0131,Additional Information Required,2026-04-23 06:33:05,Payer,1,Additional clinical documentation requested
+EVT000484,AUTH0131,Submitted,2026-04-23 21:33:05,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000485,AUTH0131,In Review,2026-04-25 05:33:05,Payer,0,Authorization status changed to In Review
+EVT000486,AUTH0131,Denied,2026-04-25 13:33:05,Payer,0,Authorization status changed to Denied
+EVT000487,AUTH0132,Draft,2026-05-07 11:10:20,Authorization Specialist,0,Authorization status changed to Draft
+EVT000488,AUTH0132,Submitted,2026-05-07 13:10:20,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000489,AUTH0132,In Review,2026-05-08 04:10:20,Payer,0,Authorization status changed to In Review
+EVT000490,AUTH0132,Approved,2026-05-09 15:10:20,Payer,0,Authorization status changed to Approved
+EVT000491,AUTH0133,Draft,2026-05-31 19:35:46,Authorization Specialist,0,Authorization status changed to Draft
+EVT000492,AUTH0133,Submitted,2026-06-01 16:35:46,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000493,AUTH0133,In Review,2026-06-02 14:35:46,Payer,0,Authorization status changed to In Review
+EVT000494,AUTH0133,Approved,2026-06-04 01:35:46,Payer,0,Authorization status changed to Approved
+EVT000495,AUTH0134,Draft,2026-02-03 20:38:13,Authorization Specialist,0,Authorization status changed to Draft
+EVT000496,AUTH0134,Submitted,2026-02-04 00:38:13,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000497,AUTH0134,In Review,2026-02-05 00:38:13,Payer,0,Authorization status changed to In Review
+EVT000498,AUTH0134,Approved,2026-02-06 02:38:13,Payer,0,Authorization status changed to Approved
+EVT000499,AUTH0135,Draft,2026-06-15 15:38:05,Authorization Specialist,0,Authorization status changed to Draft
+EVT000500,AUTH0135,Submitted,2026-06-16 15:38:05,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000501,AUTH0135,In Review,2026-06-17 06:38:05,Payer,0,Authorization status changed to In Review
+EVT000502,AUTH0136,Draft,2026-06-04 03:17:36,Authorization Specialist,0,Authorization status changed to Draft
+EVT000503,AUTH0136,Submitted,2026-06-04 20:17:36,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000504,AUTH0136,Additional Information Required,2026-06-05 01:17:36,Payer,1,Additional clinical documentation requested
+EVT000505,AUTH0137,Draft,2026-06-06 09:20:06,Authorization Specialist,0,Authorization status changed to Draft
+EVT000506,AUTH0137,Submitted,2026-06-06 15:20:06,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000507,AUTH0138,Draft,2026-04-13 09:55:09,Authorization Specialist,0,Authorization status changed to Draft
+EVT000508,AUTH0139,Draft,2026-05-06 01:30:53,Authorization Specialist,0,Authorization status changed to Draft
+EVT000509,AUTH0139,Submitted,2026-05-06 19:30:53,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000510,AUTH0139,In Review,2026-05-07 21:30:53,Payer,0,Authorization status changed to In Review
+EVT000511,AUTH0139,Denied,2026-05-08 09:30:53,Payer,0,Authorization status changed to Denied
+EVT000512,AUTH0140,Draft,2026-06-27 04:13:36,Authorization Specialist,0,Authorization status changed to Draft
+EVT000513,AUTH0140,Submitted,2026-06-27 22:13:36,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000514,AUTH0140,In Review,2026-06-28 11:13:36,Payer,0,Authorization status changed to In Review
+EVT000515,AUTH0140,Approved,2026-06-29 10:13:36,Payer,0,Authorization status changed to Approved
+EVT000516,AUTH0141,Draft,2026-04-12 02:14:20,Authorization Specialist,0,Authorization status changed to Draft
+EVT000517,AUTH0141,Submitted,2026-04-12 06:14:20,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000518,AUTH0142,Draft,2026-05-02 16:48:55,Authorization Specialist,0,Authorization status changed to Draft
+EVT000519,AUTH0142,Submitted,2026-05-03 10:48:55,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000520,AUTH0142,In Review,2026-05-04 00:48:55,Payer,0,Authorization status changed to In Review
+EVT000521,AUTH0142,Approved,2026-05-04 13:48:55,Payer,0,Authorization status changed to Approved
+EVT000522,AUTH0143,Draft,2026-06-13 22:28:27,Authorization Specialist,0,Authorization status changed to Draft
+EVT000523,AUTH0143,Submitted,2026-06-14 00:28:27,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000524,AUTH0143,Additional Information Required,2026-06-14 09:28:27,Payer,1,Additional clinical documentation requested
+EVT000525,AUTH0143,Submitted,2026-06-14 14:28:27,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000526,AUTH0143,In Review,2026-06-15 10:28:27,Payer,0,Authorization status changed to In Review
+EVT000527,AUTH0143,Approved,2026-06-16 03:28:27,Payer,0,Authorization status changed to Approved
+EVT000528,AUTH0144,Draft,2026-06-22 23:01:32,Authorization Specialist,0,Authorization status changed to Draft
+EVT000529,AUTH0144,Submitted,2026-06-23 10:01:32,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000530,AUTH0145,Draft,2026-03-30 09:40:07,Authorization Specialist,0,Authorization status changed to Draft
+EVT000531,AUTH0145,Submitted,2026-03-31 01:40:07,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000532,AUTH0145,Additional Information Required,2026-04-01 07:40:07,Payer,1,Additional clinical documentation requested
+EVT000533,AUTH0145,Submitted,2026-04-02 02:40:07,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000534,AUTH0145,In Review,2026-04-03 11:40:07,Payer,0,Authorization status changed to In Review
+EVT000535,AUTH0145,Approved,2026-04-04 04:40:07,Payer,0,Authorization status changed to Approved
+EVT000536,AUTH0146,Draft,2026-05-23 21:37:07,Authorization Specialist,0,Authorization status changed to Draft
+EVT000537,AUTH0146,Submitted,2026-05-24 11:37:07,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000538,AUTH0146,In Review,2026-05-24 23:37:07,Payer,0,Authorization status changed to In Review
+EVT000539,AUTH0146,Approved,2026-05-26 02:37:07,Payer,0,Authorization status changed to Approved
+EVT000540,AUTH0147,Draft,2026-04-01 21:55:11,Authorization Specialist,0,Authorization status changed to Draft
+EVT000541,AUTH0147,Submitted,2026-04-02 13:55:11,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000542,AUTH0147,Additional Information Required,2026-04-03 08:55:11,Payer,1,Additional clinical documentation requested
+EVT000543,AUTH0148,Draft,2026-06-18 03:17:43,Authorization Specialist,0,Authorization status changed to Draft
+EVT000544,AUTH0148,Submitted,2026-06-18 10:17:43,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000545,AUTH0148,Additional Information Required,2026-06-19 10:17:43,Payer,1,Additional clinical documentation requested
+EVT000546,AUTH0148,Submitted,2026-06-20 08:17:43,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000547,AUTH0148,In Review,2026-06-21 08:17:43,Payer,0,Authorization status changed to In Review
+EVT000548,AUTH0148,Approved,2026-06-22 00:17:43,Payer,0,Authorization status changed to Approved
+EVT000549,AUTH0149,Draft,2026-06-21 00:47:22,Authorization Specialist,0,Authorization status changed to Draft
+EVT000550,AUTH0149,Submitted,2026-06-21 14:47:22,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000551,AUTH0149,Additional Information Required,2026-06-23 02:47:22,Payer,1,Additional clinical documentation requested
+EVT000552,AUTH0149,Submitted,2026-06-23 20:47:22,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000553,AUTH0149,In Review,2026-06-24 15:47:22,Payer,0,Authorization status changed to In Review
+EVT000554,AUTH0149,Approved,2026-06-25 08:47:22,Payer,0,Authorization status changed to Approved
+EVT000555,AUTH0150,Draft,2026-04-07 10:22:26,Authorization Specialist,0,Authorization status changed to Draft
+EVT000556,AUTH0150,Submitted,2026-04-08 08:22:26,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000557,AUTH0150,Additional Information Required,2026-04-09 18:22:26,Payer,1,Additional clinical documentation requested
+EVT000558,AUTH0151,Draft,2026-01-27 08:10:55,Authorization Specialist,0,Authorization status changed to Draft
+EVT000559,AUTH0151,Submitted,2026-01-27 21:10:55,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000560,AUTH0152,Draft,2026-04-22 01:42:18,Authorization Specialist,0,Authorization status changed to Draft
+EVT000561,AUTH0152,Submitted,2026-04-22 14:42:18,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000562,AUTH0152,Additional Information Required,2026-04-23 12:42:18,Payer,1,Additional clinical documentation requested
+EVT000563,AUTH0153,Draft,2026-02-24 15:35:34,Authorization Specialist,0,Authorization status changed to Draft
+EVT000564,AUTH0153,Submitted,2026-02-25 12:35:34,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000565,AUTH0153,In Review,2026-02-25 23:35:34,Payer,0,Authorization status changed to In Review
+EVT000566,AUTH0154,Draft,2026-04-19 15:41:05,Authorization Specialist,0,Authorization status changed to Draft
+EVT000567,AUTH0154,Submitted,2026-04-19 23:41:05,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000568,AUTH0154,In Review,2026-04-21 11:41:05,Payer,0,Authorization status changed to In Review
+EVT000569,AUTH0154,Approved,2026-04-22 16:41:05,Payer,0,Authorization status changed to Approved
+EVT000570,AUTH0155,Draft,2026-05-19 21:34:44,Authorization Specialist,0,Authorization status changed to Draft
+EVT000571,AUTH0155,Submitted,2026-05-20 13:34:44,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000572,AUTH0155,In Review,2026-05-21 02:34:44,Payer,0,Authorization status changed to In Review
+EVT000573,AUTH0156,Draft,2026-03-04 04:27:27,Authorization Specialist,0,Authorization status changed to Draft
+EVT000574,AUTH0156,Submitted,2026-03-04 15:27:27,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000575,AUTH0156,In Review,2026-03-05 16:27:27,Payer,0,Authorization status changed to In Review
+EVT000576,AUTH0157,Draft,2026-02-28 13:07:31,Authorization Specialist,0,Authorization status changed to Draft
+EVT000577,AUTH0157,Submitted,2026-03-01 01:07:31,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000578,AUTH0157,Additional Information Required,2026-03-01 12:07:31,Payer,1,Additional clinical documentation requested
+EVT000579,AUTH0157,Submitted,2026-03-02 05:07:31,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000580,AUTH0157,In Review,2026-03-03 04:07:31,Payer,0,Authorization status changed to In Review
+EVT000581,AUTH0157,Approved,2026-03-03 09:07:31,Payer,0,Authorization status changed to Approved
+EVT000582,AUTH0158,Draft,2026-02-14 12:25:41,Authorization Specialist,0,Authorization status changed to Draft
+EVT000583,AUTH0158,Submitted,2026-02-14 19:25:41,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000584,AUTH0158,In Review,2026-02-15 23:25:41,Payer,0,Authorization status changed to In Review
+EVT000585,AUTH0158,Approved,2026-02-16 12:25:41,Payer,0,Authorization status changed to Approved
+EVT000586,AUTH0159,Draft,2026-01-05 00:15:16,Authorization Specialist,0,Authorization status changed to Draft
+EVT000587,AUTH0159,Submitted,2026-01-05 15:15:16,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000588,AUTH0159,In Review,2026-01-06 08:15:16,Payer,0,Authorization status changed to In Review
+EVT000589,AUTH0159,Denied,2026-01-07 14:15:16,Payer,0,Authorization status changed to Denied
+EVT000590,AUTH0160,Draft,2026-02-10 14:16:56,Authorization Specialist,0,Authorization status changed to Draft
+EVT000591,AUTH0160,Submitted,2026-02-11 07:16:56,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000592,AUTH0160,In Review,2026-02-12 11:16:56,Payer,0,Authorization status changed to In Review
+EVT000593,AUTH0160,Approved,2026-02-13 11:16:56,Payer,0,Authorization status changed to Approved
+EVT000594,AUTH0161,Draft,2026-03-11 03:05:49,Authorization Specialist,0,Authorization status changed to Draft
+EVT000595,AUTH0161,Submitted,2026-03-12 02:05:49,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000596,AUTH0161,In Review,2026-03-12 22:05:49,Payer,0,Authorization status changed to In Review
+EVT000597,AUTH0161,Approved,2026-03-14 08:05:49,Payer,0,Authorization status changed to Approved
+EVT000598,AUTH0162,Draft,2026-02-13 23:57:22,Authorization Specialist,0,Authorization status changed to Draft
+EVT000599,AUTH0162,Submitted,2026-02-14 10:57:22,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000600,AUTH0162,In Review,2026-02-15 03:57:22,Payer,0,Authorization status changed to In Review
+EVT000601,AUTH0162,Denied,2026-02-16 14:57:22,Payer,0,Authorization status changed to Denied
+EVT000602,AUTH0163,Draft,2026-01-24 23:58:28,Authorization Specialist,0,Authorization status changed to Draft
+EVT000603,AUTH0163,Submitted,2026-01-25 18:58:28,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000604,AUTH0163,Additional Information Required,2026-01-26 22:58:28,Payer,1,Additional clinical documentation requested
+EVT000605,AUTH0164,Draft,2026-02-26 04:27:16,Authorization Specialist,0,Authorization status changed to Draft
+EVT000606,AUTH0165,Draft,2026-02-11 21:15:02,Authorization Specialist,0,Authorization status changed to Draft
+EVT000607,AUTH0165,Submitted,2026-02-12 16:15:02,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000608,AUTH0165,In Review,2026-02-13 13:15:02,Payer,0,Authorization status changed to In Review
+EVT000609,AUTH0166,Draft,2026-02-17 09:56:10,Authorization Specialist,0,Authorization status changed to Draft
+EVT000610,AUTH0166,Submitted,2026-02-17 18:56:10,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000611,AUTH0166,In Review,2026-02-18 12:56:10,Payer,0,Authorization status changed to In Review
+EVT000612,AUTH0166,Approved,2026-02-18 19:56:10,Payer,0,Authorization status changed to Approved
+EVT000613,AUTH0167,Draft,2026-05-13 14:35:05,Authorization Specialist,0,Authorization status changed to Draft
+EVT000614,AUTH0167,Submitted,2026-05-14 09:35:05,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000615,AUTH0167,Additional Information Required,2026-05-14 23:35:05,Payer,1,Additional clinical documentation requested
+EVT000616,AUTH0167,Submitted,2026-05-15 16:35:05,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000617,AUTH0167,In Review,2026-05-17 02:35:05,Payer,0,Authorization status changed to In Review
+EVT000618,AUTH0168,Draft,2026-02-25 18:07:54,Authorization Specialist,0,Authorization status changed to Draft
+EVT000619,AUTH0168,Submitted,2026-02-25 22:07:54,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000620,AUTH0168,Additional Information Required,2026-02-26 16:07:54,Payer,1,Additional clinical documentation requested
+EVT000621,AUTH0169,Draft,2026-06-21 15:33:34,Authorization Specialist,0,Authorization status changed to Draft
+EVT000622,AUTH0169,Submitted,2026-06-21 18:33:34,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000623,AUTH0169,In Review,2026-06-22 23:33:34,Payer,0,Authorization status changed to In Review
+EVT000624,AUTH0169,Approved,2026-06-24 10:33:34,Payer,0,Authorization status changed to Approved
+EVT000625,AUTH0170,Draft,2026-02-28 06:36:30,Authorization Specialist,0,Authorization status changed to Draft
+EVT000626,AUTH0170,Cancelled,2026-03-01 07:36:30,Authorization Specialist,0,Authorization status changed to Cancelled
+EVT000627,AUTH0171,Draft,2026-06-23 00:15:06,Authorization Specialist,0,Authorization status changed to Draft
+EVT000628,AUTH0171,Submitted,2026-06-23 18:15:06,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000629,AUTH0172,Draft,2026-02-01 21:16:41,Authorization Specialist,0,Authorization status changed to Draft
+EVT000630,AUTH0172,Submitted,2026-02-02 19:16:41,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000631,AUTH0172,Additional Information Required,2026-02-03 15:16:41,Payer,1,Additional clinical documentation requested
+EVT000632,AUTH0173,Draft,2026-05-12 06:56:13,Authorization Specialist,0,Authorization status changed to Draft
+EVT000633,AUTH0173,Submitted,2026-05-13 04:56:13,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000634,AUTH0173,Additional Information Required,2026-05-14 09:56:13,Payer,1,Additional clinical documentation requested
+EVT000635,AUTH0173,Submitted,2026-05-15 02:56:13,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000636,AUTH0173,In Review,2026-05-16 14:56:13,Payer,0,Authorization status changed to In Review
+EVT000637,AUTH0173,Approved,2026-05-17 14:56:13,Payer,0,Authorization status changed to Approved
+EVT000638,AUTH0174,Draft,2026-04-04 01:05:50,Authorization Specialist,0,Authorization status changed to Draft
+EVT000639,AUTH0174,Submitted,2026-04-04 11:05:50,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000640,AUTH0174,Additional Information Required,2026-04-05 15:05:50,Payer,1,Additional clinical documentation requested
+EVT000641,AUTH0174,Submitted,2026-04-06 02:05:50,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000642,AUTH0174,In Review,2026-04-07 10:05:50,Payer,0,Authorization status changed to In Review
+EVT000643,AUTH0174,Approved,2026-04-08 07:05:50,Payer,0,Authorization status changed to Approved
+EVT000644,AUTH0175,Draft,2026-02-21 02:55:33,Authorization Specialist,0,Authorization status changed to Draft
+EVT000645,AUTH0176,Draft,2026-02-01 08:20:03,Authorization Specialist,0,Authorization status changed to Draft
+EVT000646,AUTH0176,Submitted,2026-02-02 08:20:03,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000647,AUTH0176,In Review,2026-02-03 07:20:03,Payer,0,Authorization status changed to In Review
+EVT000648,AUTH0177,Draft,2026-02-13 05:13:55,Authorization Specialist,0,Authorization status changed to Draft
+EVT000649,AUTH0177,Submitted,2026-02-13 11:13:55,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000650,AUTH0177,Additional Information Required,2026-02-14 20:13:55,Payer,1,Additional clinical documentation requested
+EVT000651,AUTH0177,Submitted,2026-02-15 19:13:55,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000652,AUTH0177,In Review,2026-02-16 22:13:55,Payer,0,Authorization status changed to In Review
+EVT000653,AUTH0177,Approved,2026-02-18 04:13:55,Payer,0,Authorization status changed to Approved
+EVT000654,AUTH0178,Draft,2026-05-13 10:37:23,Authorization Specialist,0,Authorization status changed to Draft
+EVT000655,AUTH0178,Submitted,2026-05-13 14:37:23,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000656,AUTH0178,Additional Information Required,2026-05-14 22:37:23,Payer,1,Additional clinical documentation requested
+EVT000657,AUTH0179,Draft,2026-01-23 02:55:51,Authorization Specialist,0,Authorization status changed to Draft
+EVT000658,AUTH0180,Draft,2026-01-30 10:21:45,Authorization Specialist,0,Authorization status changed to Draft
+EVT000659,AUTH0180,Submitted,2026-01-31 02:21:45,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000660,AUTH0180,In Review,2026-01-31 13:21:45,Payer,0,Authorization status changed to In Review
+EVT000661,AUTH0180,Approved,2026-02-01 06:21:45,Payer,0,Authorization status changed to Approved
+EVT000662,AUTH0181,Draft,2026-06-07 08:46:41,Authorization Specialist,0,Authorization status changed to Draft
+EVT000663,AUTH0181,Submitted,2026-06-07 23:46:41,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000664,AUTH0181,Additional Information Required,2026-06-09 08:46:41,Payer,1,Additional clinical documentation requested
+EVT000665,AUTH0181,Submitted,2026-06-10 06:46:41,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000666,AUTH0181,In Review,2026-06-10 13:46:41,Payer,0,Authorization status changed to In Review
+EVT000667,AUTH0181,Denied,2026-06-11 22:46:41,Payer,0,Authorization status changed to Denied
+EVT000668,AUTH0182,Draft,2026-04-23 15:07:33,Authorization Specialist,0,Authorization status changed to Draft
+EVT000669,AUTH0182,Submitted,2026-04-24 15:07:33,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000670,AUTH0182,In Review,2026-04-24 23:07:33,Payer,0,Authorization status changed to In Review
+EVT000671,AUTH0182,Approved,2026-04-25 06:07:33,Payer,0,Authorization status changed to Approved
+EVT000672,AUTH0183,Draft,2026-02-05 06:46:25,Authorization Specialist,0,Authorization status changed to Draft
+EVT000673,AUTH0183,Submitted,2026-02-06 04:46:25,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000674,AUTH0183,In Review,2026-02-07 10:46:25,Payer,0,Authorization status changed to In Review
+EVT000675,AUTH0183,Approved,2026-02-08 13:46:25,Payer,0,Authorization status changed to Approved
+EVT000676,AUTH0184,Draft,2026-05-13 21:45:14,Authorization Specialist,0,Authorization status changed to Draft
+EVT000677,AUTH0185,Draft,2026-04-15 15:48:21,Authorization Specialist,0,Authorization status changed to Draft
+EVT000678,AUTH0186,Draft,2026-02-28 06:28:20,Authorization Specialist,0,Authorization status changed to Draft
+EVT000679,AUTH0186,Submitted,2026-03-01 01:28:20,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000680,AUTH0186,Additional Information Required,2026-03-02 08:28:20,Payer,1,Additional clinical documentation requested
+EVT000681,AUTH0187,Draft,2026-03-09 13:13:16,Authorization Specialist,0,Authorization status changed to Draft
+EVT000682,AUTH0187,Submitted,2026-03-09 18:13:16,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000683,AUTH0187,Additional Information Required,2026-03-10 00:13:16,Payer,1,Additional clinical documentation requested
+EVT000684,AUTH0187,Submitted,2026-03-10 17:13:16,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000685,AUTH0187,In Review,2026-03-10 22:13:16,Payer,0,Authorization status changed to In Review
+EVT000686,AUTH0187,Approved,2026-03-11 17:13:16,Payer,0,Authorization status changed to Approved
+EVT000687,AUTH0188,Draft,2026-03-29 00:33:58,Authorization Specialist,0,Authorization status changed to Draft
+EVT000688,AUTH0188,Submitted,2026-03-29 03:33:58,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000689,AUTH0188,In Review,2026-03-29 22:33:58,Payer,0,Authorization status changed to In Review
+EVT000690,AUTH0188,Approved,2026-03-30 04:33:58,Payer,0,Authorization status changed to Approved
+EVT000691,AUTH0189,Draft,2026-05-27 19:41:31,Authorization Specialist,0,Authorization status changed to Draft
+EVT000692,AUTH0189,Submitted,2026-05-28 13:41:31,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000693,AUTH0189,Additional Information Required,2026-05-29 11:41:31,Payer,1,Additional clinical documentation requested
+EVT000694,AUTH0189,Submitted,2026-05-29 22:41:31,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000695,AUTH0189,In Review,2026-05-30 22:41:31,Payer,0,Authorization status changed to In Review
+EVT000696,AUTH0189,Denied,2026-05-31 22:41:31,Payer,0,Authorization status changed to Denied
+EVT000697,AUTH0190,Draft,2026-02-28 16:26:09,Authorization Specialist,0,Authorization status changed to Draft
+EVT000698,AUTH0190,Submitted,2026-03-01 12:26:09,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000699,AUTH0190,In Review,2026-03-02 03:26:09,Payer,0,Authorization status changed to In Review
+EVT000700,AUTH0191,Draft,2026-05-06 06:04:12,Authorization Specialist,0,Authorization status changed to Draft
+EVT000701,AUTH0191,Submitted,2026-05-07 00:04:12,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000702,AUTH0192,Draft,2026-02-28 13:34:54,Authorization Specialist,0,Authorization status changed to Draft
+EVT000703,AUTH0192,Submitted,2026-03-01 08:34:54,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000704,AUTH0193,Draft,2026-06-06 19:11:20,Authorization Specialist,0,Authorization status changed to Draft
+EVT000705,AUTH0193,Submitted,2026-06-06 22:11:20,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000706,AUTH0193,Additional Information Required,2026-06-08 04:11:20,Payer,1,Additional clinical documentation requested
+EVT000707,AUTH0194,Draft,2026-02-17 11:48:09,Authorization Specialist,0,Authorization status changed to Draft
+EVT000708,AUTH0194,Submitted,2026-02-17 15:48:09,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000709,AUTH0194,In Review,2026-02-18 23:48:09,Payer,0,Authorization status changed to In Review
+EVT000710,AUTH0194,Denied,2026-02-20 02:48:09,Payer,0,Authorization status changed to Denied
+EVT000711,AUTH0195,Draft,2026-03-15 13:43:48,Authorization Specialist,0,Authorization status changed to Draft
+EVT000712,AUTH0195,Submitted,2026-03-15 17:43:48,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000713,AUTH0195,In Review,2026-03-16 09:43:48,Payer,0,Authorization status changed to In Review
+EVT000714,AUTH0195,Approved,2026-03-17 02:43:48,Payer,0,Authorization status changed to Approved
+EVT000715,AUTH0196,Draft,2026-02-11 11:05:44,Authorization Specialist,0,Authorization status changed to Draft
+EVT000716,AUTH0196,Submitted,2026-02-11 16:05:44,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000717,AUTH0197,Draft,2026-06-28 00:47:54,Authorization Specialist,0,Authorization status changed to Draft
+EVT000718,AUTH0197,Submitted,2026-06-28 11:47:54,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000719,AUTH0197,In Review,2026-06-29 15:47:54,Payer,0,Authorization status changed to In Review
+EVT000720,AUTH0197,Approved,2026-07-01 00:47:54,Payer,0,Authorization status changed to Approved
+EVT000721,AUTH0198,Draft,2026-03-12 04:03:55,Authorization Specialist,0,Authorization status changed to Draft
+EVT000722,AUTH0198,Submitted,2026-03-12 21:03:55,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000723,AUTH0199,Draft,2026-03-14 07:36:36,Authorization Specialist,0,Authorization status changed to Draft
+EVT000724,AUTH0199,Submitted,2026-03-14 10:36:36,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000725,AUTH0200,Draft,2026-04-18 18:37:07,Authorization Specialist,0,Authorization status changed to Draft
+EVT000726,AUTH0200,Submitted,2026-04-19 09:37:07,Authorization Specialist,0,Authorization status changed to Submitted
+EVT000727,AUTH0200,In Review,2026-04-20 07:37:07,Payer,0,Authorization status changed to In Review
+EVT000728,AUTH0200,Approved,2026-04-20 20:37:07,Payer,0,Authorization status changed to Approved

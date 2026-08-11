@@ -1,0 +1,11 @@
+procedure_code,procedure_description,request_count,approvals,denials,denial_rate_pct,average_turnaround_hours
+74177,"CT abdomen and pelvis with contrast",36,10,9,47.4,50.5
+93306,"Complete transthoracic echocardiography",21,10,3,23.1,57.7
+72148,"MRI lumbar spine without contrast",21,9,3,25.0,37.6
+62323,"Lumbar epidural injection",20,10,0,0.0,41.0
+70553,"MRI brain with and without contrast",19,6,2,25.0,44.1
+43239,"Upper gastrointestinal endoscopy with biopsy",19,6,4,40.0,55.5
+27447,"Total knee arthroplasty",18,7,2,22.2,50.0
+71260,"CT chest with contrast",16,9,2,18.2,53.8
+73721,"MRI lower-extremity joint without contrast",15,5,5,50.0,53.7
+97110,"Therapeutic exercise treatment",15,8,0,0.0,38.3

@@ -42,8 +42,7 @@ An end-to-end healthcare interoperability and operational analytics project for 
 
 [View the project files](Project_3_Healthcare_Prior_Authorization_FHIR) · [Open the live Tableau dashboard](https://public.tableau.com/app/profile/brandon.mcdermott/viz/HealthcarePriorAuthorizationOperationsDashboard/PriorAuthorizationOperationsDashboard)
 
-![Healthcare Prior Authorization Operations Dashboard](/Users/brandon_mcdermott/Documents/Healthcare_Portfolio/Project_3_Healthcare_Prior_Authorization_FHIR/images/dashboard_screenshot.png)
-
+![Healthcare Prior Authorization Operations Dashboard](Project_3_Healthcare_Prior_Authorization_FHIR/images/dashboard_screenshot.png)
 
 ## Repository Structure
 

@@ -1,0 +1,11 @@
+procedure_id,procedure_code,procedure_description,service_category,authorization_required
+PROC001,72148,MRI lumbar spine without contrast,Diagnostic Imaging,1
+PROC002,70553,MRI brain with and without contrast,Diagnostic Imaging,1
+PROC003,73721,MRI lower-extremity joint without contrast,Diagnostic Imaging,1
+PROC004,71260,CT chest with contrast,Diagnostic Imaging,1
+PROC005,74177,CT abdomen and pelvis with contrast,Diagnostic Imaging,1
+PROC006,93306,Complete transthoracic echocardiography,Cardiology,1
+PROC007,62323,Lumbar epidural injection,Pain Management,1
+PROC008,27447,Total knee arthroplasty,Surgery,1
+PROC009,43239,Upper gastrointestinal endoscopy with biopsy,Gastroenterology,1
+PROC010,97110,Therapeutic exercise treatment,Rehabilitation,1

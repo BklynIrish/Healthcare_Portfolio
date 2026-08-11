@@ -1,0 +1,8 @@
+current_status,request_count,percentage_of_requests
+Approved,80,40.0
+"In Review",30,15.0
+Denied,30,15.0
+"Additional Information Required",20,10.0
+Submitted,20,10.0
+Cancelled,10,5.0
+Draft,10,5.0

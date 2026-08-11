@@ -1,0 +1,11 @@
+provider_id,npi,provider_name,specialty,organization_name,active
+PRV001,1000000001,"Maya Chen, MD",Orthopedic Surgery,Northstar Medical Group,1
+PRV002,1000000002,"Daniel Brooks, MD",Neurology,Northstar Medical Group,1
+PRV003,1000000003,"Sophia Patel, DO",Primary Care,Northstar Primary Care,1
+PRV004,1000000004,"Marcus Rivera, MD",Cardiology,Northstar Heart Center,1
+PRV005,1000000005,"Olivia Murphy, MD",Rheumatology,Northstar Specialty Care,1
+PRV006,1000000006,"Ethan Williams, MD",Pain Medicine,Northstar Specialty Care,1
+PRV007,1000000007,"Grace Thompson, MD",Oncology,Northstar Cancer Center,1
+PRV008,1000000008,"Julian Kim, MD",Gastroenterology,Northstar Medical Group,1
+PRV009,1000000009,"Nora Davis, MD",Pulmonology,Northstar Specialty Care,1
+PRV010,1000000010,"Samuel Nguyen, MD",Physical Medicine,Northstar Rehabilitation,1

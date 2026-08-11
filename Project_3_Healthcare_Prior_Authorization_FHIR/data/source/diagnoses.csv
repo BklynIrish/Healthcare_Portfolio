@@ -1,0 +1,11 @@
+diagnosis_id,diagnosis_code,diagnosis_description,code_system
+DX001,M54.50,"Low back pain, unspecified",ICD-10-CM
+DX002,M25.561,Pain in right knee,ICD-10-CM
+DX003,R51.9,"Headache, unspecified",ICD-10-CM
+DX004,R07.9,"Chest pain, unspecified",ICD-10-CM
+DX005,R10.9,"Abdominal pain, unspecified",ICD-10-CM
+DX006,M17.11,"Unilateral primary osteoarthritis, right knee",ICD-10-CM
+DX007,M54.16,Lumbar radiculopathy,ICD-10-CM
+DX008,R06.02,Shortness of breath,ICD-10-CM
+DX009,K21.9,Gastro-esophageal reflux disease,ICD-10-CM
+DX010,M25.512,Pain in left shoulder,ICD-10-CM
