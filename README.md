@@ -25,6 +25,26 @@ Builds and analyzes a relational healthcare revenue-cycle database containing pa
 - Relational database design and ERD documentation
 - KPI development and business-impact interpretation
 
+## Project 3 — Healthcare Prior Authorization Workflow and FHIR API Integration
+
+An end-to-end healthcare interoperability and operational analytics project for a fictional health network. I generated and validated synthetic prior-authorization data, designed a MySQL relational model, created connected FHIR R4–aligned transaction bundles, tested REST API requests in Postman, calculated operational KPIs, and built an interactive Tableau dashboard with an actionable overdue work queue.
+
+**Highlights**
+
+- Generated 200 synthetic authorization requests and 728 status-history events
+- Modeled `Patient`, `Practitioner`, `Organization`, `Coverage`, `ServiceRequest`, `Claim`, `ClaimResponse`, and `Task` resources
+- Built MySQL validation, analytical views, and KPI queries
+- Measured approval, denial, first-pass completeness, rework, turnaround, pending volume, and SLA performance
+- Published an interactive Tableau operations dashboard
+- Used synthetic data only; no PHI is included
+
+**Technology:** Python, MySQL, HL7 FHIR R4, JSON, REST APIs, Postman, Tableau Public, Git, and GitHub
+
+[View the project files](Project_3_Healthcare_Prior_Authorization_FHIR) · [Open the live Tableau dashboard](https://public.tableau.com/app/profile/brandon.mcdermott/viz/HealthcarePriorAuthorizationOperationsDashboard/PriorAuthorizationOperationsDashboard)
+
+![Healthcare Prior Authorization Operations Dashboard](/Users/brandon_mcdermott/Documents/Healthcare_Portfolio/Project_3_Healthcare_Prior_Authorization_FHIR/images/dashboard_screenshot.png)
+
+
 ## Repository Structure
 
 ```text
@@ -34,12 +54,41 @@ Healthcare_Portfolio/
 │   ├── README.md
 │   ├── Healthcare_Data_Quality_Checks.sql
 │   └── images/
-└── Project_2_HC_Revenue_Cycle/
+├── Project_2_HC_Revenue_Cycle/
+│   ├── README.md
+│   ├── claim_revenue_cycle.sql
+│   ├── healthcare_revenue_cycle.sql
+│   ├── Healthcare_Revenue_Cycle.vuerd.json
+│   └── images/
+└── Project_3_Healthcare_Prior_Authorization_FHIR/
     ├── README.md
-    ├── claim_revenue_cycle.sql
-    ├── healthcare_revenue_cycle.sql
-    ├── Healthcare_Revenue_Cycle.vuerd.json
-    └── images/
+    ├── dashboard/
+    │   └── Dashboard_URL.md
+    ├── data/
+    │   ├── fhir/
+    │   ├── processed/
+    │   │   └── authorization_operations.csv
+    │   └── source/
+    ├── docs/
+    │   ├── data_dictionary.md
+    │   ├── fhir_mapping.md
+    │   ├── project_charter.md
+    │   ├── requirements.md
+    │   └── workflow_analysis.md
+    ├── images/
+    ├── postman/
+    │   └── Project 3 — FHIR Prior Authorization API.postman_collection.json
+    ├── python/
+    │   ├── generate_fhir_bundles.py
+    │   ├── generate_synthetic_data.py
+    │   ├── validate_fhir_bundles.py
+    │   └── validate_synthetic_data.py
+    └── sql/
+        ├── authorization_analytics.sql
+        ├── create_database.sql
+        ├── HC_Prior_Auth_FHIR.sql
+        └── post_import_validation.sql
 ```
 
 Future healthcare analytics projects will be added as additional numbered project directories.
+
