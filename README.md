@@ -1,6 +1,6 @@
 # Healthcare Data Analytics Portfolio
 
-This repository contains a growing collection of SQL projects focused on healthcare data quality, revenue-cycle operations, relational data modeling, and business analysis.
+This repository contains a growing collection of healthcare analytics and data engineering projects focused on SQL, data quality, revenue-cycle operations, interoperability, and operational reporting.
 
 ## Completed Projects
 
@@ -12,20 +12,11 @@ Applies MySQL validation rules to identify missing patient identifiers, duplicat
 
 ### Project 2 — Healthcare Revenue Cycle Analytics
 
-Builds and analyzes a relational healthcare revenue-cycle database containing patients, providers, insurance plans, claims, and payments. The project examines claim status, denials, billed and allowed amounts, payer and provider performance, submission lag, reimbursement, and reusable reporting through a SQL view.
+Builds and analyzes a relational healthcare revenue-cycle database containing patients, providers, insurance plans, claims, and payments. The project examines claim status, denials, billed and allowed amounts, payer and provider performance, submission lag, reimbursement, and reusable reporting through SQL views.
 
 [View Project 2](Project_2_HC_Revenue_Cycle/README.md)
 
-## Tools and Methods
-
-- MySQL and MySQL Workbench
-- SQL joins, aggregations, conditional logic, common table expressions, and window functions
-- Data-quality validation and exception reporting
-- Healthcare claims and revenue-cycle analytics
-- Relational database design and ERD documentation
-- KPI development and business-impact interpretation
-
-## Project 3 — Healthcare Prior Authorization Workflow and FHIR API Integration
+### Project 3 — Healthcare Prior Authorization Workflow and FHIR API Integration
 
 An end-to-end healthcare interoperability and operational analytics project for a fictional health network. I generated and validated synthetic prior-authorization data, designed a MySQL relational model, created connected FHIR R4–aligned transaction bundles, tested REST API requests in Postman, calculated operational KPIs, and built an interactive Tableau dashboard with an actionable overdue work queue.
 
@@ -89,5 +80,14 @@ Healthcare_Portfolio/
         └── post_import_validation.sql
 ```
 
-Future healthcare analytics projects will be added as additional numbered project directories.
+## Tools and Methods
 
+- MySQL and MySQL Workbench
+- SQL joins, aggregations, conditional logic, common table expressions, and window functions
+- Data-quality validation and exception reporting
+- Healthcare claims and revenue-cycle analytics
+- Relational database design and ERD documentation
+- KPI development and business-impact interpretation
+- FHIR R4 mapping, API testing, and Tableau dashboard development
+
+Future healthcare analytics projects will be added as additional numbered project directories.
