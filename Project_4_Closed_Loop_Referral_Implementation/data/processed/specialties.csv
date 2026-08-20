@@ -1,0 +1,11 @@
+specialty_id,specialty_code,specialty_name,routine_intake_sla_hours,urgent_intake_sla_hours,routine_outreach_sla_hours,urgent_outreach_sla_hours,active_flag,created_at,updated_at
+SPC001,CARD,Cardiology,48,8,72,24,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+SPC002,DERM,Dermatology,48,8,72,24,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+SPC003,ENDO,Endocrinology,48,8,72,24,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+SPC004,GAST,Gastroenterology,48,8,72,24,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+SPC005,NEUR,Neurology,48,8,72,24,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+SPC006,ORTH,Orthopedics,48,8,72,24,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+SPC007,ENT,Otolaryngology,48,8,72,24,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+SPC008,PULM,Pulmonology,48,8,72,24,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+SPC009,RHEU,Rheumatology,48,8,72,24,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+SPC010,GSUR,General Surgery,48,8,72,24,1,2025-07-01 12:00:00,2025-07-01 12:00:00

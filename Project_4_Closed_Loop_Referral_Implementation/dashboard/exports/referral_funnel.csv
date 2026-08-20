@@ -1,0 +1,8 @@
+stage_order,funnel_stage,referral_count,percent_of_received
+1,Received,2500,1.0000
+2,Validated,2359,0.9436
+3,"Outreach Initiated",2194,0.8776
+4,Scheduled,1700,0.6800
+5,"Appointment Completed",1345,0.5380
+6,"Report Received",1148,0.4592
+7,"Closed Loop",1148,0.4592

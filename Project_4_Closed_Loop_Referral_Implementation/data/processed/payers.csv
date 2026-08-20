@@ -1,0 +1,9 @@
+payer_id,payer_name,payer_category,electronic_payer_id,active_flag,created_at,updated_at
+PAY001,Garden State Health,Commercial,EPAY0001,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+PAY002,MetroChoice Benefits,Commercial,EPAY0002,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+PAY003,NorthEast Preferred,Commercial,EPAY0003,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+PAY004,Federal Medicare,Medicare,EPAY0004,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+PAY005,Garden Medicaid,Medicaid,EPAY0005,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+PAY006,Community Health Plan,Medicaid,EPAY0006,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+PAY007,UnionCare,Commercial,EPAY0007,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+PAY008,Self-Pay,Self-Pay,,1,2025-07-01 12:00:00,2025-07-01 12:00:00

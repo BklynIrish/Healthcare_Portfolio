@@ -3,3 +3,18 @@ __MACOSX/
 .vscode/
 *.code-workspace
 *.zip
+
+# Python local files
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# Local database and tool output
+*.sqlite
+*.sqlite3
+*.db
+*.log

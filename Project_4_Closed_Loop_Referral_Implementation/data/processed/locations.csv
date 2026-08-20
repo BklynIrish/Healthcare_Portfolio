@@ -1,0 +1,32 @@
+location_id,organization_id,location_name,address_line_1,city,state_code,postal_code,phone_number,telehealth_flag,active_flag,created_at,updated_at
+LOC001,ORG001,Morristown Primary Care Campus,101 Portfolio Avenue,Morristown,NJ,07001,973-555-3001,0,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+LOC002,ORG002,Denville Primary Care Campus,102 Portfolio Avenue,Denville,NJ,07002,973-555-3002,0,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+LOC003,ORG003,Parsippany Primary Care Campus,103 Portfolio Avenue,Parsippany,NJ,07003,973-555-3003,0,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+LOC004,ORG004,Wayne Primary Care Campus,104 Portfolio Avenue,Wayne,NJ,07004,973-555-3004,0,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+LOC005,ORG005,Newark Primary Care Campus,105 Portfolio Avenue,Newark,NJ,07005,973-555-3005,0,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+LOC006,ORG006,Paterson Primary Care Campus,106 Portfolio Avenue,Paterson,NJ,07006,973-555-3006,0,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+LOC007,ORG007,Cardiology Center 01,301 Synthetic Plaza,Paterson,NJ,07101,862-555-3001,0,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+LOC008,ORG008,Dermatology Center 02,302 Synthetic Plaza,Parsippany,NJ,07102,862-555-3002,0,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+LOC009,ORG009,Endocrinology Center 03,303 Synthetic Plaza,Newark,NJ,07103,862-555-3003,0,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+LOC010,ORG010,Gastroenterology Center 04,304 Synthetic Plaza,Newark,NJ,07104,862-555-3004,1,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+LOC011,ORG011,Neurology Center 05,305 Synthetic Plaza,Paterson,NJ,07105,862-555-3005,0,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+LOC012,ORG012,Orthopedics Center 06,306 Synthetic Plaza,Morristown,NJ,07106,862-555-3006,0,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+LOC013,ORG013,Otolaryngology Center 07,307 Synthetic Plaza,Parsippany,NJ,07107,862-555-3007,0,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+LOC014,ORG014,Pulmonology Center 08,308 Synthetic Plaza,Newark,NJ,07108,862-555-3008,1,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+LOC015,ORG015,Rheumatology Center 09,309 Synthetic Plaza,Paterson,NJ,07109,862-555-3009,0,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+LOC016,ORG016,General Surgery Center 10,310 Synthetic Plaza,Newark,NJ,07110,862-555-3010,0,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+LOC017,ORG017,Cardiology Center 11,311 Synthetic Plaza,Morristown,NJ,07111,862-555-3011,0,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+LOC018,ORG018,Dermatology Center 12,312 Synthetic Plaza,Newark,NJ,07112,862-555-3012,1,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+LOC019,ORG019,Endocrinology Center 13,313 Synthetic Plaza,Wayne,NJ,07113,862-555-3013,0,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+LOC020,ORG020,Gastroenterology Center 14,314 Synthetic Plaza,Paterson,NJ,07114,862-555-3014,0,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+LOC021,ORG021,Neurology Center 15,315 Synthetic Plaza,Newark,NJ,07115,862-555-3015,0,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+LOC022,ORG022,Orthopedics Center 16,316 Synthetic Plaza,Morristown,NJ,07116,862-555-3016,1,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+LOC023,ORG023,Otolaryngology Center 17,317 Synthetic Plaza,Morristown,NJ,07117,862-555-3017,0,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+LOC024,ORG024,Pulmonology Center 18,318 Synthetic Plaza,Denville,NJ,07118,862-555-3018,0,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+LOC025,ORG025,Rheumatology Center 19,319 Synthetic Plaza,Parsippany,NJ,07119,862-555-3019,0,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+LOC026,ORG026,General Surgery Center 20,320 Synthetic Plaza,Morristown,NJ,07120,862-555-3020,1,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+LOC027,ORG027,Cardiology Center 21,321 Synthetic Plaza,Denville,NJ,07121,862-555-3021,0,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+LOC028,ORG028,Dermatology Center 22,322 Synthetic Plaza,Denville,NJ,07122,862-555-3022,0,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+LOC029,ORG029,Endocrinology Center 23,323 Synthetic Plaza,Paterson,NJ,07123,862-555-3023,0,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+LOC030,ORG030,Gastroenterology Center 24,324 Synthetic Plaza,Morristown,NJ,07124,862-555-3024,1,1,2025-07-01 12:00:00,2025-07-01 12:00:00
+LOC031,ORG031,Neurology Center 25,325 Synthetic Plaza,Denville,NJ,07125,862-555-3025,0,1,2025-07-01 12:00:00,2025-07-01 12:00:00

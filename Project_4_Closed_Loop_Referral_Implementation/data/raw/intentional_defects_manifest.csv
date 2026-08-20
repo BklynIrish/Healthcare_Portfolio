@@ -1,0 +1,36 @@
+defect_id,file_name,record_id,field_name,rule_code,description
+DEF001,patients_raw.csv,PAT000001,phone_number,RAW-PHONE-001,Invalid telephone format
+DEF002,patients_raw.csv,PAT000002,phone_number,RAW-PHONE-001,Invalid telephone format
+DEF003,patients_raw.csv,PAT000003,phone_number,RAW-PHONE-001,Invalid telephone format
+DEF004,patients_raw.csv,PAT000004,phone_number,RAW-PHONE-001,Invalid telephone format
+DEF005,patients_raw.csv,PAT000005,phone_number,RAW-PHONE-001,Invalid telephone format
+DEF006,coverages_raw.csv,COV000001,termination_date,DQ-019,Termination date precedes effective date
+DEF007,coverages_raw.csv,COV000002,termination_date,DQ-019,Termination date precedes effective date
+DEF008,coverages_raw.csv,COV000003,termination_date,DQ-019,Termination date precedes effective date
+DEF009,coverages_raw.csv,COV000004,termination_date,DQ-019,Termination date precedes effective date
+DEF010,coverages_raw.csv,COV000005,termination_date,DQ-019,Termination date precedes effective date
+DEF011,referrals_raw.csv,REF000001,specialty_id,RAW-REQ-001,Required specialty is missing
+DEF012,referrals_raw.csv,REF000002,specialty_id,RAW-REQ-001,Required specialty is missing
+DEF013,referrals_raw.csv,REF000003,specialty_id,RAW-REQ-001,Required specialty is missing
+DEF014,referrals_raw.csv,REF000004,specialty_id,RAW-REQ-001,Required specialty is missing
+DEF015,referrals_raw.csv,REF000005,specialty_id,RAW-REQ-001,Required specialty is missing
+DEF016,referrals_raw.csv,REF000006,priority,RAW-VAL-002,Priority is outside allowed values
+DEF017,referrals_raw.csv,REF000007,priority,RAW-VAL-002,Priority is outside allowed values
+DEF018,referrals_raw.csv,REF000008,priority,RAW-VAL-002,Priority is outside allowed values
+DEF019,referrals_raw.csv,REF000009,priority,RAW-VAL-002,Priority is outside allowed values
+DEF020,referrals_raw.csv,REF000010,priority,RAW-VAL-002,Priority is outside allowed values
+DEF021,referrals_raw.csv,REF000011,source_referral_id,RAW-DUP-003,Duplicate source referral identifier
+DEF022,referrals_raw.csv,REF000012,source_referral_id,RAW-DUP-003,Duplicate source referral identifier
+DEF023,referrals_raw.csv,REF000013,source_referral_id,RAW-DUP-003,Duplicate source referral identifier
+DEF024,referrals_raw.csv,REF000014,source_referral_id,RAW-DUP-003,Duplicate source referral identifier
+DEF025,referrals_raw.csv,REF000015,source_referral_id,RAW-DUP-003,Duplicate source referral identifier
+DEF026,referrals_raw.csv,REF000016,referral_received_at,RAW-DATE-004,Referral received before source order
+DEF027,referrals_raw.csv,REF000017,referral_received_at,RAW-DATE-004,Referral received before source order
+DEF028,referrals_raw.csv,REF000018,referral_received_at,RAW-DATE-004,Referral received before source order
+DEF029,referrals_raw.csv,REF000019,referral_received_at,RAW-DATE-004,Referral received before source order
+DEF030,referrals_raw.csv,REF000020,referral_received_at,RAW-DATE-004,Referral received before source order
+DEF031,referrals_raw.csv,REF000021,coverage_id,DQ-001,Coverage belongs to another patient
+DEF032,referrals_raw.csv,REF000022,coverage_id,DQ-001,Coverage belongs to another patient
+DEF033,referrals_raw.csv,REF000023,coverage_id,DQ-001,Coverage belongs to another patient
+DEF034,referrals_raw.csv,REF000024,coverage_id,DQ-001,Coverage belongs to another patient
+DEF035,referrals_raw.csv,REF000025,coverage_id,DQ-001,Coverage belongs to another patient
