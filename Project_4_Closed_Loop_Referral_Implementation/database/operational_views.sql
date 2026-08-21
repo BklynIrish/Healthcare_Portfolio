@@ -498,3 +498,26 @@ ORDER BY
 LIMIT 25;
 
 -- End of operational_views.sql
+
+	SELECT 'v_referral_lifecycle' AS view_name, COUNT(*) AS row_count
+	FROM v_referral_lifecycle
+
+	UNION ALL
+
+	SELECT 'v_operational_work_queue', COUNT(*)
+	FROM v_operational_work_queue
+
+	UNION ALL
+
+	SELECT 'v_referral_funnel', COUNT(*)
+	FROM v_referral_funnel
+
+	UNION ALL
+
+	SELECT 'v_site_specialty_performance', COUNT(*)
+	FROM v_site_specialty_performance
+
+	UNION ALL
+
+	SELECT 'v_data_exception_queue', COUNT(*)
+	FROM v_data_exception_queue;

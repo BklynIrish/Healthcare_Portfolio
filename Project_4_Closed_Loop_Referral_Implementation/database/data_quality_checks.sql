@@ -418,4 +418,12 @@ SELECT
     AS total_database_rows,
     28543 AS expected_database_rows;
 
+
+SELECT
+    COUNT(*) AS rules_tested,
+    SUM(test_status = 'PASS') AS rules_passed,
+    SUM(test_status = 'FAIL') AS rules_failed,
+    SUM(failure_count) AS total_failures
+FROM dq_results;
 -- End of data_quality_checks.sql
+
